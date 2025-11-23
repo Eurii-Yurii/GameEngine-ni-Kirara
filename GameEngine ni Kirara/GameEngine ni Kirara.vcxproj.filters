@@ -119,5 +119,8 @@
     <ClInclude Include="score.h">
       <Filter>Header Files\Gameplay\Scores</Filter>
     </ClInclude>
+    <ClInclude Include="RNG.h">
+      <Filter>Header Files\Functions\random</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

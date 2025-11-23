@@ -1,7 +1,10 @@
 #include <iostream>
+
+#include "RNG.h"
+
 using namespace std;
 
-int randomNumberGenerator(int rngMax) {
+int randomNumGen::randomNumberGenerator(int rngMax) {
 	int RNG = 0;
 
 	RNG = rand() % (rngMax - 1);
