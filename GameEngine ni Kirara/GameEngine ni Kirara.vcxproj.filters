@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Draw">
-      <UniqueIdentifier>{ec145bfd-5a91-4160-a42b-92602eb0d4ee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Draw">
-      <UniqueIdentifier>{932eefe1-a599-4fac-9e4b-134c18390cb8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Engine">
       <UniqueIdentifier>{123e8767-cbd6-46dc-94ae-51c7a8818fac}</UniqueIdentifier>
     </Filter>
@@ -37,10 +31,28 @@
     <Filter Include="Header Files\Gameplay">
       <UniqueIdentifier>{7c9b073b-3ae7-4cad-9f0c-7c122a98fb53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Functions">
+      <UniqueIdentifier>{ee8752a4-139a-4fda-91e2-9f9f15bf55e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Functions\Draw">
+      <UniqueIdentifier>{ec145bfd-5a91-4160-a42b-92602eb0d4ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Functions\Camera">
+      <UniqueIdentifier>{d3fc0ebe-3d80-4021-a54e-c9cd416963f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Functions">
+      <UniqueIdentifier>{30b58311-751e-4e3d-adc0-7f515beb2d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Functions\Camera">
+      <UniqueIdentifier>{88156d98-9e97-479d-a79a-e4a626c8fe74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Functions\Draw">
+      <UniqueIdentifier>{932eefe1-a599-4fac-9e4b-134c18390cb8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
-      <Filter>Source Files\Draw</Filter>
+      <Filter>Source Files\Functions\Draw</Filter>
     </ClCompile>
     <ClCompile Include="engine.cpp">
       <Filter>Source Files\Engine</Filter>
@@ -54,10 +66,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Functions\Camera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawBox.h">
-      <Filter>Header Files\Draw</Filter>
+      <Filter>Header Files\Functions\Draw</Filter>
     </ClInclude>
     <ClInclude Include="engine.h">
       <Filter>Header Files\Engine</Filter>
@@ -67,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="gameObject.h">
       <Filter>Header Files\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Functions\Camera</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -27,5 +27,5 @@ void PrepareEngine(int argc, char** argv)
 	Initialize();
 
 	//enter GLUT event processing cycle
-	glutMainLoop();
+	
 }
