@@ -1,4 +1,4 @@
-#ifndef DRAWBOW_H
+#ifndef DRAWBOX_H
 #define DRAWBOX_H
 
 
@@ -16,6 +16,7 @@ public:
 	draw();
 
 	void Box(float posX, float posY, float posZ, float length, float width, float height);
+
 };
 
 #endif

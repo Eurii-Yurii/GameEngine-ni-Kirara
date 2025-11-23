@@ -8,16 +8,20 @@
 
 using namespace std;
 
+draw box;
+
 void Initialize() {
 
 }
 
 void Update() 
 {
-	draw::Box;
+	box.Box(0,0,0, 5,5,5);
 }
 
 int main(int argc, char** argv)
 {
 	PrepareEngine(argc, argv);
+
+	return 0;
 }

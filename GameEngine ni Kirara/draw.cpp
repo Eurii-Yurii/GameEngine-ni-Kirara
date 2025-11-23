@@ -16,6 +16,8 @@ draw::draw() {
 
 void draw::Box(float posX, float posY, float posZ, float length, float width, float height) {
 
+    std::cout << "Kirara";
+
     glBegin(GL_QUADS);
 
     glVertex3f(posX, posY, posZ);
