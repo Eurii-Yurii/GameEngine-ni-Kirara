@@ -128,6 +128,7 @@
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="gameObject.cpp" />
     <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="gravity.cpp" />
     <ClCompile Include="inputs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RNG.cpp" />
@@ -139,6 +140,7 @@
     <ClInclude Include="engine.h" />
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="graphics.h" />
+    <ClInclude Include="gravity.h" />
     <ClInclude Include="Inputs.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="score.h" />

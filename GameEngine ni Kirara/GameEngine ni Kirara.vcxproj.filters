@@ -67,6 +67,12 @@
     <Filter Include="Header Files\Functions\random">
       <UniqueIdentifier>{e2880e4f-96dc-4c71-9768-54a22ca4a4bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Gravity">
+      <UniqueIdentifier>{1b6e920f-13b3-457b-ae06-221da43d7b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Gravity">
+      <UniqueIdentifier>{7701a3ed-6c6e-4196-b1c8-78186c7974c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -96,6 +102,9 @@
     <ClCompile Include="RNG.cpp">
       <Filter>Source Files\Functions\random</Filter>
     </ClCompile>
+    <ClCompile Include="gravity.cpp">
+      <Filter>Source Files\Gravity</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawBox.h">
@@ -121,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="RNG.h">
       <Filter>Header Files\Functions\random</Filter>
+    </ClInclude>
+    <ClInclude Include="gravity.h">
+      <Filter>Header Files\Gravity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
