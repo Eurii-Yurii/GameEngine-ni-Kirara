@@ -3,10 +3,10 @@
 
 class randomNumGen {
 private:
-	int rngMax;
+	static int rngMax;
 
 public:
-	int randomNumberGenerator(int rngMax);
+	static int randomNumberGenerator(int rngMax);
 };
 
 #endif // !

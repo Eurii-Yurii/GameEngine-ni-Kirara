@@ -6,12 +6,15 @@
 #include "drawBox.h"
 #include "inputs.h"
 #include "Camera.h"
+#include "RNG.h"
 
 Camera mCamera;
 
 using namespace std;
 
 draw box;
+
+int dih;
 
 void Initialize() {
 
@@ -20,6 +23,9 @@ void Initialize() {
 void Update() 
 {
 	box.Box(0,0,0, 5,5,5);
+	dih = randomNumGen::randomNumberGenerator(100);
+
+	cout << dih;
 }
 
 int main(int argc, char** argv)
