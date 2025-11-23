@@ -4,7 +4,17 @@
 
 #include "drawBox.h"
 
-void Box(float posX, float posY, float posZ, float length, float width, float height) {
+drawBox::drawBox() {
+	posX = 0;
+	posY = 0;
+	posZ = 0;
+	length = 5;
+	width = 5;
+	height = 5;
+}
+
+
+void drawBox::Box(float posX, float posY, float posZ, float length, float width, float height) {
 
     glBegin(GL_QUADS);
 
@@ -38,4 +48,5 @@ void Box(float posX, float posY, float posZ, float length, float width, float he
     glVertex3f(posX + width, posY, posZ + height);
     glVertex3f(posX, posY, posZ + height);
     glEnd();
+
 }
