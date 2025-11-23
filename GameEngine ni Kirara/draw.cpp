@@ -14,7 +14,7 @@ draw::draw() {
 }
 
 
-void draw::Box(float posX, float posY, float posZ, float length, float width, float height) 
+void draw::Box(float posX, float posY, float posZ, float length, float width, float height)
 {
 
     glBegin(GL_QUADS);

@@ -5,7 +5,9 @@
 
 #include "drawBox.h"
 #include "inputs.h"
+#include "Camera.h"
 
+Camera mCamera;
 
 using namespace std;
 
@@ -24,6 +26,11 @@ int main(int argc, char** argv)
 {
 	PrepareEngine(argc, argv);
 	inputs::control();
+	mCamera.cameraControl(
+		0,0,500,
+		0,0,0,
+		0,1,0
+	);
 	glutMainLoop();
 	return 0;
 }

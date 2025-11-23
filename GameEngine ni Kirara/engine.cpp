@@ -1,6 +1,8 @@
 #include "engine.h"
 #include "graphics.h"
+#include "Camera.h"
 
+extern Camera mCamera;
 
 void PrepareEngine(int argc, char** argv)
 {
@@ -17,9 +19,9 @@ void PrepareEngine(int argc, char** argv)
 	glutTimerFunc(16, Timer, 0); //Renders program at ~60fps :]
 
 	// Setup Camera
-	gluLookAt(0.0f, 0.0f, 20.0f,
+	/*gluLookAt(0.0f, 0.0f, 20.0f,
 		0.0f, 0.0f, 0.0f,
-		0.0f, 1.0f, 0.0f);
+		0.0f, 1.0f, 0.0f);*/
 
 	glEnable(GL_DEPTH_TEST);
 
