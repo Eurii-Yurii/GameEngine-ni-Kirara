@@ -1,6 +1,7 @@
 #ifndef drawBox
 #define drawBox
 
+
 class drawBox {
 private:
 	float
@@ -12,6 +13,7 @@ private:
 		height;
 public:
 
-};
+
+}
 
 #endif
