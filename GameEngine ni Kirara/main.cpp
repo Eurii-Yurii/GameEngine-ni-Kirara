@@ -4,6 +4,7 @@
 #include "engine.h"
 
 #include "drawBox.h"
+#include "inputs.h"
 
 
 using namespace std;
@@ -22,7 +23,7 @@ void Update()
 int main(int argc, char** argv)
 {
 	PrepareEngine(argc, argv);
-
+	inputs::control();
 	glutMainLoop();
 	return 0;
 }
