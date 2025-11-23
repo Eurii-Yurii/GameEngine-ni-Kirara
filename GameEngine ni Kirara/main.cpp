@@ -12,8 +12,9 @@ void Initialize() {
 
 }
 
-void Update() {
-	drawBox();
+void Update() 
+{
+	draw::Box;
 }
 
 int main(int argc, char** argv)

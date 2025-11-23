@@ -4,7 +4,7 @@
 
 #include "drawBox.h"
 
-drawBox::drawBox() {
+draw::draw() {
 	posX = 0;
 	posY = 0;
 	posZ = 0;
@@ -14,7 +14,7 @@ drawBox::drawBox() {
 }
 
 
-void drawBox::Box(float posX, float posY, float posZ, float length, float width, float height) {
+void draw::Box(float posX, float posY, float posZ, float length, float width, float height) {
 
     glBegin(GL_QUADS);
 
