@@ -49,6 +49,12 @@
     <Filter Include="Source Files\Functions\Draw">
       <UniqueIdentifier>{932eefe1-a599-4fac-9e4b-134c18390cb8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Functions\Inputs">
+      <UniqueIdentifier>{ee07fb0b-4978-41ef-bf30-327810e7470d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Functions\Inputs">
+      <UniqueIdentifier>{6be997e8-e533-4936-aaf8-8e377330a114}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -69,6 +75,9 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files\Functions\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="inputs.cpp">
+      <Filter>Source Files\Functions\Inputs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawBox.h">
@@ -85,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>Header Files\Functions\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs.h">
+      <Filter>Header Files\Functions\Inputs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
