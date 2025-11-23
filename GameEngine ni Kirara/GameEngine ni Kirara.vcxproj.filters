@@ -55,6 +55,12 @@
     <Filter Include="Source Files\Functions\Inputs">
       <UniqueIdentifier>{6be997e8-e533-4936-aaf8-8e377330a114}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Gameplay\Scores">
+      <UniqueIdentifier>{f6ada6e1-158d-46d4-89a3-18f1fda11abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Gameplay\Scores">
+      <UniqueIdentifier>{9f9464b6-19f5-40cf-9293-1ee48afafa1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -78,6 +84,9 @@
     <ClCompile Include="inputs.cpp">
       <Filter>Source Files\Functions\Inputs</Filter>
     </ClCompile>
+    <ClCompile Include="score.cpp">
+      <Filter>Source Files\Gameplay\Scores</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawBox.h">
@@ -97,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="Inputs.h">
       <Filter>Header Files\Functions\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="score.h">
+      <Filter>Header Files\Gameplay\Scores</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

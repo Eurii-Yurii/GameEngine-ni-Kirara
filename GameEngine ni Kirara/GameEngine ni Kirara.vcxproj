@@ -130,6 +130,7 @@
     <ClCompile Include="graphics.cpp" />
     <ClCompile Include="inputs.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="score.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
@@ -138,6 +139,7 @@
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="Inputs.h" />
+    <ClInclude Include="score.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
