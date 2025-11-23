@@ -21,6 +21,7 @@ Camera::Camera() {
 void Camera::cameraControl(float eyeX, float eyeY, float eyeZ,
 	float centerX, float centerY, float centerZ,
 	float upX, float upY, float upZ) {
+
 	gluLookAt(eyeX, eyeY, eyeZ,
 		centerX, centerY, centerZ,
 		upX, upY, upZ);

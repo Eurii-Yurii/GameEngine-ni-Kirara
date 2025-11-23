@@ -61,6 +61,12 @@
     <Filter Include="Source Files\Gameplay\Scores">
       <UniqueIdentifier>{9f9464b6-19f5-40cf-9293-1ee48afafa1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Functions\random">
+      <UniqueIdentifier>{8d310399-8239-46c6-9a1b-81266e152756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Functions\random">
+      <UniqueIdentifier>{e2880e4f-96dc-4c71-9768-54a22ca4a4bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -86,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="score.cpp">
       <Filter>Source Files\Gameplay\Scores</Filter>
+    </ClCompile>
+    <ClCompile Include="RNG.cpp">
+      <Filter>Source Files\Functions\random</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -27,7 +27,7 @@ int main(int argc, char** argv)
 	PrepareEngine(argc, argv);
 	inputs::control();
 	mCamera.cameraControl(
-		0,0,500,
+		0,0,20,
 		0,0,0,
 		0,1,0
 	);
