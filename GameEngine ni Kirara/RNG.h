@@ -7,6 +7,8 @@ private:
 
 public:
 	static int randomNumberGenerator(int rngMax);
+	static void getDih(int num);
+	static void times(int num);
 };
 
 #endif // !

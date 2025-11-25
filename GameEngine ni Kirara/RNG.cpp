@@ -1,13 +1,20 @@
 #include <iostream>
-
+#include <glut.h>
 #include "RNG.h"
 
 using namespace std;
 
+int RNG = 0;
+
 int randomNumGen::randomNumberGenerator(int rngMax) {
-	int RNG = 0;
 
 	RNG = rand() % (rngMax - 1);
 
 	return RNG;
+}
+
+void randomNumGen::getDih(int num)
+{
+	cout << RNG;
+	randomNumberGenerator(6);
 }

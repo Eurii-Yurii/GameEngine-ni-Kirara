@@ -20,12 +20,15 @@ void Initialize() {
 
 }
 
+void timerer(int time)
+{
+	randomNumGen::getDih(1);
+	glutTimerFunc(2000, timerer, 0);
+}
+
 void Update() 
 {
-	box.Box(0,0,0, 5,5,5);
-	dih = randomNumGen::randomNumberGenerator(100);
-
-	cout << dih;
+	box.Box(0, 0, 0, 5, 5, 5);
 }
 
 int main(int argc, char** argv)
@@ -37,6 +40,8 @@ int main(int argc, char** argv)
 		0,0,0,
 		0,1,0
 	);
+
+	glutTimerFunc(0, timerer, 0);
 	glutMainLoop();
 	return 0;
 }
