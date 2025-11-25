@@ -12,8 +12,10 @@ private:
 
 	float pressedHeight;
 	static bool isPressed;
+	static bool isLightUp;
 
 public:
 	void drawButton(float posX, float posY, float posZ, float length, float width, float height);
 	void buttonPressed(bool isPressed);
+	void buttonLightUp(bool isLightUp);
 };

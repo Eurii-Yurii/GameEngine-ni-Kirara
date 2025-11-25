@@ -11,6 +11,10 @@ using namespace std;
 
 bool button::isPressed = false;
 
+void button::buttonLightUp(bool isLightUp) {
+
+}
+
 void button::buttonPressed(bool isPressed) {
     if(isPressed == true) {
         cout << "Button Pressed!" << endl;
