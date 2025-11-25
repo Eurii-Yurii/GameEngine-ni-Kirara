@@ -73,6 +73,12 @@
     <Filter Include="Header Files\Gravity">
       <UniqueIdentifier>{7701a3ed-6c6e-4196-b1c8-78186c7974c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\WhackAMole ni Kirara">
+      <UniqueIdentifier>{483ab581-6b2e-4936-9c05-d6d0400b2289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WhackAMole ni Kirara">
+      <UniqueIdentifier>{8d866915-c68a-4733-8556-ece59202973b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -86,9 +92,6 @@
     </ClCompile>
     <ClCompile Include="gameObject.cpp">
       <Filter>Source Files\Gameplay</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files\Functions\Camera</Filter>
@@ -104,6 +107,12 @@
     </ClCompile>
     <ClCompile Include="gravity.cpp">
       <Filter>Source Files\Gravity</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\WhackAMole ni Kirara</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Source Files\WhackAMole ni Kirara</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="gravity.h">
       <Filter>Header Files\Gravity</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Header Files\WhackAMole ni Kirara</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

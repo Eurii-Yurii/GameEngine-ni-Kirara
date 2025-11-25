@@ -2,7 +2,7 @@
 #define DRAWBOX_H
 
 
-class draw {
+class thisBox {
 private:
 	float
 		posX,
@@ -13,9 +13,9 @@ private:
 		height;
 public:
 
-	draw();
+	thisBox();
 
-	void Box(float posX, float posY, float posZ, float length, float width, float height);
+	void Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B);
 
 };
 

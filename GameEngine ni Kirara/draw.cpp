@@ -4,7 +4,7 @@
 
 #include "drawBox.h"
 
-draw::draw() {
+thisBox::thisBox() {
 	posX = 0;
 	posY = 0;
 	posZ = 0;
@@ -14,9 +14,10 @@ draw::draw() {
 }
 
 
-void draw::Box(float posX, float posY, float posZ, float length, float width, float height)
+void thisBox::Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B)
 {
 
+    glColor3ub(R, G, B);
     glBegin(GL_QUADS);
 
     glVertex3f(posX, posY, posZ);

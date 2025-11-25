@@ -4,6 +4,7 @@
 #include "engine.h"
 
 #include "drawBox.h"
+#include "button.h"
 #include "inputs.h"
 #include "Camera.h"
 #include "RNG.h"
@@ -12,9 +13,7 @@ Camera mCamera;
 
 using namespace std;
 
-draw box;
-
-int dih;
+thisBox box;
 
 void Initialize() {
 
@@ -22,10 +21,7 @@ void Initialize() {
 
 void Update() 
 {
-	box.Box(0,0,0, 5,5,5);
-	dih = randomNumGen::randomNumberGenerator(100);
-
-	cout << dih;
+	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
 }
 
 int main(int argc, char** argv)
@@ -33,9 +29,9 @@ int main(int argc, char** argv)
 	PrepareEngine(argc, argv);
 	inputs::control();
 	mCamera.cameraControl(
-		0,0,20,
+		0,0.-20,15,
 		0,0,0,
-		0,1,0
+		0,10,0
 	);
 	glutMainLoop();
 	return 0;
