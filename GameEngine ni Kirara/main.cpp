@@ -23,7 +23,7 @@ void Initialize() {
 
 void Update() 
 {
-
+	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);	
 }
 
 int main(int argc, char** argv)
