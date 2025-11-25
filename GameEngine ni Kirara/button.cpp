@@ -11,17 +11,25 @@ using namespace std;
 
 bool button::isPressed = false;
 
-void button::buttonPressed() {
-    cout << "Button Pressed!" << endl;
-    isPressed = true;
+void button::buttonPressed(bool isPressed) {
+    if(isPressed == true) {
+        cout << "Button Pressed!" << endl;
+        button::isPressed = true;
+    }
+    else {
+		button::isPressed = false;
+    }
 }
 
 void button::drawButton (float posX, float posY, float posZ, float length, float width, float height) {
 
     float pressedHeight = 1.5;
 
-    if(isPressed == true) {
-        pressedHeight = -0.1;
+    if(isPressed == false) {
+        pressedHeight = 1.5;
+    }
+    else {
+        pressedHeight = 0.5;
     }
 
     glColor3ub(32, 32, 32);

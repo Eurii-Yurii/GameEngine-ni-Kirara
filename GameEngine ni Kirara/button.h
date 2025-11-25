@@ -15,5 +15,5 @@ private:
 
 public:
 	void drawButton(float posX, float posY, float posZ, float length, float width, float height);
-	void buttonPressed();
+	void buttonPressed(bool isPressed);
 };

@@ -9,10 +9,10 @@ public:
 	static void keyUp(unsigned char key, int x, int y);
 	static void control();
 	static bool isKeyDown(unsigned char key);
+	static bool isKeyUp(unsigned char key);
 
 private:
 	static bool keys[256];
-	static unsigned char lastKey;
 };
 
 #endif // !1

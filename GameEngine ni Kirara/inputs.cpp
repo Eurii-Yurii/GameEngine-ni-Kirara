@@ -5,12 +5,10 @@
 using namespace std;
 
 bool inputs::keys[256] = { false };
-unsigned char inputs::lastKey = 0;
 
 void inputs::keyDown(unsigned char key, int x, int y)
 {
 	keys[key] = true;
-	lastKey = key;
 	cout << "Key Down: " << key << endl;
 }
 
@@ -29,4 +27,9 @@ void inputs::control()
 bool inputs::isKeyDown(unsigned char key)
 {
 	return keys[key];
+}
+
+bool inputs::isKeyUp(unsigned char key)
+{
+	return !keys[key];
 }
