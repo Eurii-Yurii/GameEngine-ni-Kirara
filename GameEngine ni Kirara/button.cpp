@@ -19,7 +19,7 @@ bool button::isLightUp = false;
 
 void button::buttonLightUp(bool isLightUp)
 {
-    if (isLightUp = true)
+    if (isLightUp == true)
     {
         button::isLightUp = true;
     }
@@ -34,7 +34,6 @@ void button::buttonPressed(bool isPressed) {
     {
         cout << "Button Pressed!" << endl;
         button::isPressed = true;
-
     }
 
     else 
@@ -43,14 +42,14 @@ void button::buttonPressed(bool isPressed) {
     }
 }
 
-void button::drawButton (float posX, float posY, float posZ, float length, float width, float height) {
+void button::drawButton(float posX, float posY, float posZ, float length, float width, float height) {
 
     float pressedHeight = 1.5;
     int R2 = 255;
     int G2 = 0;
     int B2 = 0;
 
-    if(isPressed == false) 
+    if (isPressed == false)
     {
         pressedHeight = 1.5;
     }
@@ -74,7 +73,7 @@ void button::drawButton (float posX, float posY, float posZ, float length, float
     int R = 1, G = 1, B = 1;
 
     glColor3ub(32, 32, 32);
-	box.Box(posX, posY, posZ, length, width, height, R, G, B);
+    box.Box(posX, posY, posZ, length, width, height, R, G, B);
 
 
     box.Box((posX + 0.5), (posY + 0.5), (posZ + 0.5), (length - 1), (width - 1), (height + pressedHeight), R2, G2, B2);

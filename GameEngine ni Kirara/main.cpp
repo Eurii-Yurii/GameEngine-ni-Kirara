@@ -41,14 +41,20 @@ void Update()
 	if (inputs::isKeyDown(32)) 
 	{
 		button1.buttonPressed(true);
-		button1.buttonLightUp(true);
 		
 	}
 	else if (inputs::isKeyUp(32)) 
 	{
-		button1.buttonLightUp(false);
 		button1.buttonPressed(false);
-		
+	}
+
+	if (rando == 0)
+	{
+		button1.buttonLightUp(true);
+	}
+	else
+	{
+		button1.buttonLightUp(false);
 	}
 	
 	
@@ -60,6 +66,14 @@ void Update()
 	else if (inputs::isKeyUp('p')) {
 		button2.buttonPressed(false);
 	}
+	if (rando == 1)
+	{
+		button2.buttonLightUp(true);
+	}
+	else
+	{
+		button2.buttonLightUp(false);
+	}
 	
 
 	button3.drawButton(8, 2, -1, 5, 5, 1);
@@ -69,7 +83,14 @@ void Update()
 	else if (inputs::isKeyUp('w')) {
 		button3.buttonPressed(false);
 	}
-	
+	if (rando == 2)
+	{
+		button3.buttonLightUp(true);
+	}
+	else
+	{
+		button3.buttonLightUp(false);
+	}
 	
 
 	button4.drawButton(-8, -5, -1, 5, 5, 1);
@@ -79,7 +100,14 @@ void Update()
 	else if (inputs::isKeyUp('o')) {
 		button::buttonPressed(false);
 	}
-	
+	if (rando == 3)
+	{
+		button4.buttonLightUp(true);
+	}
+	else
+	{
+		button4.buttonLightUp(false);
+	}
 	
 
 	button5.drawButton(3.5, -5, -1, 5, 5, 1);
@@ -88,6 +116,14 @@ void Update()
 	}
 	else if (inputs::isKeyUp('q')) {
 		button5.buttonPressed(false);
+	}
+	if (rando == 4)
+	{
+		button5.buttonLightUp(true);
+	}
+	else
+	{
+		button5.buttonLightUp(false);
 	}
 	
 	
