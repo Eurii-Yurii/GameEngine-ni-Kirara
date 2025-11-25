@@ -9,10 +9,21 @@
 
 using namespace std;
 
-void drawbutton::drawButton (float posX, float posY, float posZ, float length, float width, float height) {
+bool button::isPressed = false;
+
+void button::buttonPressed() {
+    cout << "Button Pressed!" << endl;
+    isPressed = true;
+}
+
+void button::drawButton (float posX, float posY, float posZ, float length, float width, float height) {
 
     float pressedHeight = 1.5;
-    
+
+    if(isPressed == true) {
+        pressedHeight = -0.1;
+    }
+
     glColor3ub(32, 32, 32);
 	box.Box(posX, posY, posZ, length, width, height, R, G, B);
 

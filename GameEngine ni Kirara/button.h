@@ -3,7 +3,7 @@
 
 #include "drawBox.h"
 
-class drawbutton {
+class button {
 private:
 	int
 		R,
@@ -11,7 +11,9 @@ private:
 		B;
 
 	float pressedHeight;
+	static bool isPressed;
 
 public:
 	void drawButton(float posX, float posY, float posZ, float length, float width, float height);
+	void buttonPressed();
 };
