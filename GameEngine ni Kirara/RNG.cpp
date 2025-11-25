@@ -18,3 +18,8 @@ void randomNumGen::getDih(int num)
 	cout << RNG;
 	randomNumberGenerator(6);
 }
+void randomNumGen::timerer(int time)
+{
+	randomNumGen::getDih(1);
+	glutTimerFunc(2000, timerer, 0);
+}

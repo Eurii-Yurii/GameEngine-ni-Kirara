@@ -20,11 +20,7 @@ void Initialize() {
 
 }
 
-void timerer(int time)
-{
-	randomNumGen::getDih(1);
-	glutTimerFunc(2000, timerer, 0);
-}
+
 
 void Update() 
 {
@@ -41,7 +37,7 @@ int main(int argc, char** argv)
 		0,1,0
 	);
 
-	glutTimerFunc(0, timerer, 0);
+	glutTimerFunc(0, randomNumGen::timerer, 0);
 	glutMainLoop();
 	return 0;
 }

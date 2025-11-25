@@ -9,6 +9,7 @@ public:
 	static int randomNumberGenerator(int rngMax);
 	static void getDih(int num);
 	static void times(int num);
+	static void timerer(int num);
 };
 
 #endif // !
