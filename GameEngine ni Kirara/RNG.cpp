@@ -7,7 +7,7 @@ using namespace std;
 int RNG = 0;
 
 int randomNumGen::randomNumberGenerator(int rngMax) {
-
+	srand((unsigned int)time(0));
 	RNG = rand() % (rngMax - 1);
 
 	return RNG;
