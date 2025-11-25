@@ -1,13 +1,25 @@
 #include <iostream>
-
+#include <glut.h>
 #include "RNG.h"
 
 using namespace std;
 
+int RNG = 0;
+
 int randomNumGen::randomNumberGenerator(int rngMax) {
-	int RNG = 0;
 
 	RNG = rand() % (rngMax - 1);
 
 	return RNG;
+}
+
+void randomNumGen::getDih(int num)
+{
+	cout << RNG;
+	randomNumberGenerator(6);
+}
+void randomNumGen::timerer(int time)
+{
+	randomNumGen::getDih(1);
+	glutTimerFunc(2000, timerer, 0);
 }
