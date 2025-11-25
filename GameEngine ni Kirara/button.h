@@ -1,6 +1,8 @@
 #include <iostream>
 #include <glut.h>
 
+#include "drawBox.h"
+
 class drawbutton {
 private:
 	int

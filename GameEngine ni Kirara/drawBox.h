@@ -19,4 +19,6 @@ public:
 
 };
 
+extern thisBox box;
+
 #endif
