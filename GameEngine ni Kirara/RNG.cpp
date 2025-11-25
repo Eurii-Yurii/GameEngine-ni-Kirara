@@ -23,3 +23,8 @@ void randomNumGen::timerer(int time)
 	randomNumGen::getDih(1);
 	glutTimerFunc(2000, timerer, 0);
 }
+
+int randomNumGen::getRNG()
+{
+	return RNG;
+}

@@ -5,7 +5,7 @@
 
 class button {
 private:
-	int
+	static int
 		R,
 		G,
 		B;
@@ -15,7 +15,7 @@ private:
 	static bool isLightUp;
 
 public:
-	void drawButton(float posX, float posY, float posZ, float length, float width, float height);
-	void buttonPressed(bool isPressed);
-	void buttonLightUp(bool isLightUp);
+	static void drawButton(float posX, float posY, float posZ, float length, float width, float height);
+	static void buttonPressed(bool isPressed);
+	static void buttonLightUp(bool isLightUp);
 };

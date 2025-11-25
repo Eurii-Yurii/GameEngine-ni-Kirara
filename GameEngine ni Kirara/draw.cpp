@@ -16,10 +16,10 @@ thisBox::thisBox() {
 
 void thisBox::Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B)
 {
-
+    glPushMatrix();
     glColor3ub(R, G, B);
     glBegin(GL_QUADS);
-
+    glPushMatrix();
     glVertex3f(posX, posY, posZ);
     glVertex3f(posX + width, posY, posZ);
     glVertex3f(posX + width, posY + length, posZ);
@@ -50,5 +50,6 @@ void thisBox::Box(float posX, float posY, float posZ, float length, float width,
     glVertex3f(posX + width, posY, posZ + height);
     glVertex3f(posX, posY, posZ + height);
     glEnd();
+    glPopMatrix();
 
 }
