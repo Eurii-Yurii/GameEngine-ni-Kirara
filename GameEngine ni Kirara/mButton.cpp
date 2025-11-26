@@ -24,32 +24,42 @@ void hitDetection() {
 	switch (rando){
 	case 0:
 		if(inputs::isKeyDown(32)) {
-			cout << "Hit!" << endl;
-			rando = rngGen.randomNumberGenerator(6);
+			//cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(5);
+			button1.buttonLightUp(true);
+			cout << rando << endl;
 		}
 		break;
 	case 1:
 		if (inputs::isKeyDown('p')) {
-			cout << "Hit!" << endl;
-			rando = rngGen.randomNumberGenerator(6);
+			//cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(5);
+			button2.buttonLightUp(true);
+			cout << rando << endl;
 		}
 		break;
 	case 2:
 		if (inputs::isKeyDown('w')) {
-			cout << "Hit!" << endl;
-			rando = rngGen.randomNumberGenerator(6);
+			//cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(5);
+			button3.buttonLightUp(true);
+			cout << rando << endl;
 		}
 		break;
 	case 3:
 		if (inputs::isKeyDown('o')) {
-			cout << "Hit!" << endl;
-			rando = rngGen.randomNumberGenerator(6);
+			//cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(5);
+			button4.buttonLightUp(true);
+			cout << rando << endl;
 		}
 		break;
 	case 4:
 		if (inputs::isKeyDown('q')) {
-			cout << "Hit!" << endl;
-			rando = rngGen.randomNumberGenerator(6);
+			//cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(5);
+			button5.buttonLightUp(true);
+			cout << rando << endl;
 		}
 		break;
 	}
