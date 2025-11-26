@@ -132,6 +132,7 @@
     <ClCompile Include="gravity.cpp" />
     <ClCompile Include="inputs.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mButton.cpp" />
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="score.cpp" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="graphics.h" />
     <ClInclude Include="gravity.h" />
     <ClInclude Include="Inputs.h" />
+    <ClInclude Include="mButton.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="score.h" />
   </ItemGroup>

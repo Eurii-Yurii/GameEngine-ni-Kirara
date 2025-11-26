@@ -79,6 +79,12 @@
     <Filter Include="Header Files\WhackAMole ni Kirara">
       <UniqueIdentifier>{8d866915-c68a-4733-8556-ece59202973b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\WhackAMole ni Kirara\Button">
+      <UniqueIdentifier>{5eb69a47-df02-4c28-b7f3-772ca7df0fbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WhackAMole ni Kirara\Button">
+      <UniqueIdentifier>{f9851c0c-78c5-4763-8b96-8203c0f12669}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -112,7 +118,10 @@
       <Filter>Source Files\WhackAMole ni Kirara</Filter>
     </ClCompile>
     <ClCompile Include="button.cpp">
-      <Filter>Source Files\WhackAMole ni Kirara</Filter>
+      <Filter>Source Files\WhackAMole ni Kirara\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="mButton.cpp">
+      <Filter>Source Files\WhackAMole ni Kirara\Button</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +153,10 @@
       <Filter>Header Files\Gravity</Filter>
     </ClInclude>
     <ClInclude Include="button.h">
-      <Filter>Header Files\WhackAMole ni Kirara</Filter>
+      <Filter>Header Files\WhackAMole ni Kirara\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="mButton.h">
+      <Filter>Header Files\WhackAMole ni Kirara\Button</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
