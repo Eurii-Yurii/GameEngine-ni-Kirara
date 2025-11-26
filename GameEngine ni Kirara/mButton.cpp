@@ -33,6 +33,7 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			cout << rando << endl;
 			rando = rngGen.randomNumberGenerator(6);
+			millisec = 1000;
 			button1.buttonLightUp(false);
 		}
 		break;
@@ -41,6 +42,7 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			cout << rando << endl;
 			rando = rngGen.randomNumberGenerator(6);
+			millisec = 1000;
 			button2.buttonLightUp(false);
 		}
 		break;
@@ -49,6 +51,7 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			cout << rando << endl;
 			rando = rngGen.randomNumberGenerator(6);
+			millisec = 1000;
 			button3.buttonLightUp(false);
 		}
 		break;
@@ -57,6 +60,7 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			cout << rando << endl;
 			rando = rngGen.randomNumberGenerator(6);
+			millisec = 1000;
 			button4.buttonLightUp(false);
 		}
 		break;
@@ -65,6 +69,7 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			cout << rando << endl;
 			rando = rngGen.randomNumberGenerator(6);
+			millisec = 1000;
 			button5.buttonLightUp(false);
 		}
 		break;
