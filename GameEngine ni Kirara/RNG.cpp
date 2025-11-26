@@ -15,7 +15,7 @@ int randomNumGen::randomNumberGenerator(int rngMax) {
 
 void randomNumGen::getDih(int num)
 {
-	cout << RNG;
+	//cout << RNG;
 	randomNumberGenerator(6);
 }
 void randomNumGen::timerer(int time)

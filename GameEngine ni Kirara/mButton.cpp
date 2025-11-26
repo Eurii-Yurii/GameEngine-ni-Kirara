@@ -3,6 +3,8 @@
 #include <iostream>
 #include "engine.h"
 
+using namespace std;
+
 #include "drawBox.h"
 #include "button.h"
 #include "inputs.h"
@@ -14,12 +16,13 @@
 extern thisBox box;
 
 extern button button1, button2, button3, button4, button5;
-extern int rando = 0;
 
+randomNumGen rngGen;
+int rando = rngGen.randomNumberGenerator(5);
 
 void mButton() {
 	
-	rando = randomNumGen::getRNG();
+	cout << rando << endl;
 
 	button1.drawButton(-13, 2, -1, 5, 5, 1);
 	if (inputs::isKeyDown(32))
@@ -35,13 +38,12 @@ void mButton() {
 	if (rando == 0)
 	{
 		button1.buttonLightUp(true);
+		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
 		button1.buttonLightUp(false);
 	}
-
-
 
 	button2.drawButton(-2, 2, -1, 5, 5, 1);
 	if (inputs::isKeyDown('p')) {
@@ -53,12 +55,12 @@ void mButton() {
 	if (rando == 1)
 	{
 		button2.buttonLightUp(true);
+		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
 		button2.buttonLightUp(false);
 	}
-
 
 	button3.drawButton(8, 2, -1, 5, 5, 1);
 	if (inputs::isKeyDown('w')) {
@@ -70,12 +72,12 @@ void mButton() {
 	if (rando == 2)
 	{
 		button3.buttonLightUp(true);
+		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
 		button3.buttonLightUp(false);
 	}
-
 
 	button4.drawButton(-8, -5, -1, 5, 5, 1);
 	if (inputs::isKeyDown('o')) {
@@ -87,12 +89,12 @@ void mButton() {
 	if (rando == 3)
 	{
 		button4.buttonLightUp(true);
+		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
 		button4.buttonLightUp(false);
 	}
-
 
 	button5.drawButton(3.5, -5, -1, 5, 5, 1);
 	if (inputs::isKeyDown('q')) {
@@ -104,9 +106,14 @@ void mButton() {
 	if (rando == 4)
 	{
 		button5.buttonLightUp(true);
+		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
 		button5.buttonLightUp(false);
+	}
+
+	if (rando > 4) {
+		rando = rngGen.randomNumberGenerator(6);
 	}
 }
