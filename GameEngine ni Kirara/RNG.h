@@ -12,5 +12,5 @@ public:
 	static int getRNG();
 };
 
-#endif // !
+#endif
 
