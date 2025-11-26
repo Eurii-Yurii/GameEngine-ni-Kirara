@@ -10,7 +10,7 @@ private:
 		G,
 		B;
 
-	float pressedHeight;
+	static float pressedHeight;
 	static bool isPressed;
 	static bool isLightUp;
 

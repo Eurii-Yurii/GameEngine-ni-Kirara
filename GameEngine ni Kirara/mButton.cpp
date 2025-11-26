@@ -25,26 +25,31 @@ void hitDetection() {
 	case 0:
 		if(inputs::isKeyDown(32)) {
 			cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(6);
 		}
 		break;
 	case 1:
 		if (inputs::isKeyDown('p')) {
 			cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(6);
 		}
 		break;
 	case 2:
 		if (inputs::isKeyDown('w')) {
 			cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(6);
 		}
 		break;
 	case 3:
 		if (inputs::isKeyDown('o')) {
 			cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(6);
 		}
 		break;
 	case 4:
 		if (inputs::isKeyDown('q')) {
 			cout << "Hit!" << endl;
+			rando = rngGen.randomNumberGenerator(6);
 		}
 		break;
 	}
@@ -66,11 +71,12 @@ void mButton() {
 	if (rando == 0)
 	{
 		button1.buttonLightUp(true);
-		rando = rngGen.randomNumberGenerator(6);
+		
 	}
 	else
 	{
 		button1.buttonLightUp(false);
+		
 	}
 
 	button2.drawButton(-2, 2, -1, 5, 5, 1);
@@ -83,7 +89,6 @@ void mButton() {
 	if (rando == 1)
 	{
 		button2.buttonLightUp(true);
-		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
@@ -100,7 +105,6 @@ void mButton() {
 	if (rando == 2)
 	{
 		button3.buttonLightUp(true);
-		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
@@ -117,7 +121,6 @@ void mButton() {
 	if (rando == 3)
 	{
 		button4.buttonLightUp(true);
-		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
@@ -134,14 +137,13 @@ void mButton() {
 	if (rando == 4)
 	{
 		button5.buttonLightUp(true);
-		rando = rngGen.randomNumberGenerator(6);
 	}
 	else
 	{
 		button5.buttonLightUp(false);
 	}
 
-	if (rando > 4) {
+	if (rando > 4 || rando < 0) {
 		rando = rngGen.randomNumberGenerator(6);
 	}
 
