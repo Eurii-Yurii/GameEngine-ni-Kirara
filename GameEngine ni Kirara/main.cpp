@@ -16,8 +16,6 @@ using namespace std;
 Camera mCamera;
 thisBox box;
 
-
-
 void Initialize() {
 
 }

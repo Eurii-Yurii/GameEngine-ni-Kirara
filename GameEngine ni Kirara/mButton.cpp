@@ -20,15 +20,43 @@ extern button button1, button2, button3, button4, button5;
 randomNumGen rngGen;
 int rando = rngGen.randomNumberGenerator(5);
 
+void hitDetection() {
+	switch (rando){
+	case 0:
+		if(inputs::isKeyDown(32)) {
+			cout << "Hit!" << endl;
+		}
+		break;
+	case 1:
+		if (inputs::isKeyDown('p')) {
+			cout << "Hit!" << endl;
+		}
+		break;
+	case 2:
+		if (inputs::isKeyDown('w')) {
+			cout << "Hit!" << endl;
+		}
+		break;
+	case 3:
+		if (inputs::isKeyDown('o')) {
+			cout << "Hit!" << endl;
+		}
+		break;
+	case 4:
+		if (inputs::isKeyDown('q')) {
+			cout << "Hit!" << endl;
+		}
+		break;
+	}
+}	
+
 void mButton() {
-	
-	cout << rando << endl;
+	//cout << rando << endl;
 
 	button1.drawButton(-13, 2, -1, 5, 5, 1);
 	if (inputs::isKeyDown(32))
 	{
 		button1.buttonPressed(true);
-
 	}
 	else if (inputs::isKeyUp(32))
 	{
@@ -116,4 +144,6 @@ void mButton() {
 	if (rando > 4) {
 		rando = rngGen.randomNumberGenerator(6);
 	}
+
+	hitDetection();	
 }

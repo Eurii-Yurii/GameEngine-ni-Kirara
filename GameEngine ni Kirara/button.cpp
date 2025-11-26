@@ -9,13 +9,18 @@
 
 using namespace std;
 
-
-
-
 int lightButt = 0;
 bool button::isPressed = false;
 bool button::isLightUp = false;
 
+bool button::isButtonPressed() {
+    if (isPressed == true) {
+        return true;
+    }
+    else {
+        return false;
+	}
+}
 
 void button::buttonLightUp(bool isLightUp)
 {
@@ -32,7 +37,7 @@ void button::buttonLightUp(bool isLightUp)
 void button::buttonPressed(bool isPressed) {
     if(isPressed == true) 
     {
-        cout << "Button Pressed!" << endl;
+        //cout << "Button Pressed!" << endl;
         button::isPressed = true;
     }
 

@@ -9,13 +9,13 @@ bool inputs::keys[256] = { false };
 void inputs::keyDown(unsigned char key, int x, int y)
 {
 	keys[key] = true;
-	cout << "Key Down: " << key << endl;
+	//cout << "Key Down: " << key << endl;
 }
 
 void inputs::keyUp(unsigned char key, int x, int y)
 {
 	keys[key] = false;
-	cout << "Key Up: " << key << endl;
+	//cout << "Key Up: " << key << endl;
 }
 
 void inputs::control()
