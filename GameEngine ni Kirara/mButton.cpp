@@ -19,6 +19,12 @@ extern button button1, button2, button3, button4, button5;
 
 randomNumGen rngGen;
 int rando = rngGen.randomNumberGenerator(6);
+int millisec = 1000;
+
+void buttonTimer(int value) {
+	rando = rngGen.randomNumberGenerator(6);
+	glutTimerFunc(millisec, buttonTimer, 0);
+}
 
 void hitDetection() {
 	switch (rando){

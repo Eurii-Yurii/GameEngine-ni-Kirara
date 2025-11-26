@@ -27,7 +27,13 @@ void start() {
 		0, 0, 0,
 		0, 10, 0
 	);
+
 	glutTimerFunc(0, randomNumGen::timerer, 0);
+
+	extern int millisec;
+	extern void buttonTimer(int value);
+
+	glutTimerFunc(millisec, buttonTimer, 0);
 	
 }
 
