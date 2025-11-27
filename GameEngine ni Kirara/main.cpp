@@ -8,13 +8,16 @@
 #include "inputs.h"
 #include "Camera.h"
 #include "RNG.h"
+#include "gravity.h"
 
 #include "mButton.h"
 
 using namespace std;
 
+Gravity gravi;
 Camera mCamera;
 thisBox box;
+float grav;
 
 void Initialize() {
 
@@ -33,8 +36,8 @@ void start() {
 
 void Update() 
 {
+	grav = gravi.applyGravity(-1);
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
-
 	mButton();
 }
 
