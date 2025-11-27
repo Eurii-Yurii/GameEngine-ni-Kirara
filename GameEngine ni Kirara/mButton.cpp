@@ -23,9 +23,23 @@ randomNumGen rngGen;
 int rando = rngGen.randomNumberGenerator(6);
 int millisec = 1000;
 
-void buttonTimer(int value) {
+int currentTimer = 0;
+
+
+void buttonTimer(int timerID) {
+
+	if(timerID != currentTimer){
+		return;
+	}
+
 	rando = rngGen.randomNumberGenerator(6);
-	glutTimerFunc(millisec, buttonTimer, 0);
+
+	glutTimerFunc(millisec, buttonTimer, currentTimer);
+}
+
+void resetButtonTimer() {
+	currentTimer++;
+	glutTimerFunc(millisec, buttonTimer, currentTimer);
 }
 
 void hitDetection() {
@@ -34,55 +48,70 @@ void hitDetection() {
 		if(inputs::isKeyDown(32)) {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
+			playerScore.hitCounter();
+			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button1.buttonLightUp(false);
 		}
 		else {
 			playerScore.missPenalty();
+			//resetButtonTimer();
 		}
 		break;
 	case 1:
 		if (inputs::isKeyDown('p')) {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
+			playerScore.hitCounter();
+			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button2.buttonLightUp(false);
 		}
 		else {
 			playerScore.missPenalty();
+			//resetButtonTimer();
 		}
 		break;
 	case 2:
 		if (inputs::isKeyDown('w')) {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
+			playerScore.hitCounter();
+			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button3.buttonLightUp(false);
 		}
 		else {
 			playerScore.missPenalty();
+			//resetButtonTimer();
 		}
 		break;
 	case 3:
 		if (inputs::isKeyDown('o')) {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
+			playerScore.hitCounter();
+			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button4.buttonLightUp(false);
 		}
 		else {
 			playerScore.missPenalty();
+			//resetButtonTimer();
 		}
 		break;
 	case 4:
 		if (inputs::isKeyDown('q')) {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
+			playerScore.hitCounter();
+			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button5.buttonLightUp(false);
 		}
 		else {
 			playerScore.missPenalty();
+			//resetButtonTimer();
 		}
 		break;
 	}

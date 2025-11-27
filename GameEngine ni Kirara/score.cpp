@@ -11,10 +11,28 @@
 using namespace std;
 
 int scoreMultipleir = 0;
-int actualMisses = 0;
+int actualMisses = 1;
+int streakNeeded = 5;
+
+void Score::hitCounter(){
+	hits += 1;
+	streak += 1;
+	cout << "Streak: " << streak << endl;
+}
+
+void Score::streakCounter(){
+	if (streak > streakNeeded) {
+		scoreMultipleir += 1;
+		streakNeeded += 5;
+		cout << "StreakNeeded: " << streakNeeded << endl;
+	}
+}
 
 void Score::scoreAdd(){
-	score += 100;
+	streakCounter();
+
+	score += 100 * scoreMultipleir;
+
 	cout << "Score: " << score << endl;
 }
 
@@ -24,6 +42,7 @@ void Score::missPenalty(){
 	if (misses == 62) {
 		misses = 0;
 		actualMisses += 1;
+		streak = 1;
 		cout << "Misses: " << actualMisses << endl;
 	}
 }

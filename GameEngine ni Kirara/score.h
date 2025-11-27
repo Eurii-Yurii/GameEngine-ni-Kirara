@@ -5,9 +5,12 @@ private:
 	int score = 300;
 	int hits;
 	int misses;
+	int streak;
 
 public:
 
+	void hitCounter();
+	void streakCounter();
 	void scoreAdd();
 	void missPenalty();
 };
