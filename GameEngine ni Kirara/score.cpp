@@ -17,14 +17,12 @@ int streakNeeded = 5;
 void Score::hitCounter(){
 	hits += 1;
 	streak += 1;
-	cout << "Streak: " << streak << endl;
 }
 
 void Score::streakCounter(){
 	if (streak > streakNeeded) {
 		scoreMultipleir += 1;
 		streakNeeded += 5;
-		cout << "StreakNeeded: " << streakNeeded << endl;
 	}
 }
 
