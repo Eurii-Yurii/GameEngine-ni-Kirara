@@ -55,12 +55,6 @@
     <Filter Include="Source Files\Functions\Inputs">
       <UniqueIdentifier>{6be997e8-e533-4936-aaf8-8e377330a114}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Gameplay\Scores">
-      <UniqueIdentifier>{f6ada6e1-158d-46d4-89a3-18f1fda11abb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Gameplay\Scores">
-      <UniqueIdentifier>{9f9464b6-19f5-40cf-9293-1ee48afafa1e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Functions\random">
       <UniqueIdentifier>{8d310399-8239-46c6-9a1b-81266e152756}</UniqueIdentifier>
     </Filter>
@@ -85,6 +79,12 @@
     <Filter Include="Header Files\WhackAMole ni Kirara\Button">
       <UniqueIdentifier>{f9851c0c-78c5-4763-8b96-8203c0f12669}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\WhackAMole ni Kirara\Scores">
+      <UniqueIdentifier>{f6ada6e1-158d-46d4-89a3-18f1fda11abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WhackAMole ni Kirara\Scores">
+      <UniqueIdentifier>{9f9464b6-19f5-40cf-9293-1ee48afafa1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -106,7 +106,7 @@
       <Filter>Source Files\Functions\Inputs</Filter>
     </ClCompile>
     <ClCompile Include="score.cpp">
-      <Filter>Source Files\Gameplay\Scores</Filter>
+      <Filter>Source Files\WhackAMole ni Kirara\Scores</Filter>
     </ClCompile>
     <ClCompile Include="RNG.cpp">
       <Filter>Source Files\Functions\random</Filter>
@@ -144,7 +144,7 @@
       <Filter>Header Files\Functions\Inputs</Filter>
     </ClInclude>
     <ClInclude Include="score.h">
-      <Filter>Header Files\Gameplay\Scores</Filter>
+      <Filter>Header Files\WhackAMole ni Kirara\Scores</Filter>
     </ClInclude>
     <ClInclude Include="RNG.h">
       <Filter>Header Files\Functions\random</Filter>

@@ -9,11 +9,13 @@ using namespace std;
 #include "button.h"
 #include "inputs.h"
 #include "Camera.h"
+#include "score.h"
 #include "RNG.h"
 
 #include "mButton.h"
 
 extern thisBox box;
+Score playerScore;
 
 extern button button1, button2, button3, button4, button5;
 
@@ -31,41 +33,56 @@ void hitDetection() {
 	case 0:
 		if(inputs::isKeyDown(32)) {
 			//cout << "Hit!" << endl;
-			cout << rando << endl;
+			playerScore.scoreAdd();
 			rando = rngGen.randomNumberGenerator(6);
 			button1.buttonLightUp(false);
+		}
+		else {
+			playerScore.missPenalty();
 		}
 		break;
 	case 1:
 		if (inputs::isKeyDown('p')) {
 			//cout << "Hit!" << endl;
-			cout << rando << endl;
+			playerScore.scoreAdd();
 			rando = rngGen.randomNumberGenerator(6);
 			button2.buttonLightUp(false);
+		}
+		else {
+			playerScore.missPenalty();
 		}
 		break;
 	case 2:
 		if (inputs::isKeyDown('w')) {
 			//cout << "Hit!" << endl;
-			cout << rando << endl;
+			playerScore.scoreAdd();
 			rando = rngGen.randomNumberGenerator(6);
 			button3.buttonLightUp(false);
+		}
+		else {
+			playerScore.missPenalty();
 		}
 		break;
 	case 3:
 		if (inputs::isKeyDown('o')) {
 			//cout << "Hit!" << endl;
-			cout << rando << endl;
+			playerScore.scoreAdd();
 			rando = rngGen.randomNumberGenerator(6);
 			button4.buttonLightUp(false);
+		}
+		else {
+			playerScore.missPenalty();
 		}
 		break;
 	case 4:
 		if (inputs::isKeyDown('q')) {
 			//cout << "Hit!" << endl;
-			cout << rando << endl;
+			playerScore.scoreAdd();
 			rando = rngGen.randomNumberGenerator(6);
 			button5.buttonLightUp(false);
+		}
+		else {
+			playerScore.missPenalty();
 		}
 		break;
 	}
