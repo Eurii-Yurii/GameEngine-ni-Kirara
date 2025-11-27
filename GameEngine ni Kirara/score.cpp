@@ -43,4 +43,11 @@ void Score::missPenalty(){
 		streak = 1;
 		cout << "Misses: " << actualMisses << endl;
 	}
+
+	if (actualMisses >= 3) {
+		cout << "Game Over!" << endl;
+		cout << "LOSING ASS NIGGER" << endl;
+		glutLeaveGameMode;
+		exit(0);
+	}
 }
