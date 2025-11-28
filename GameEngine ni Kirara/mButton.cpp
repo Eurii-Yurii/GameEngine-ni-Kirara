@@ -32,8 +32,10 @@ void buttonTimer(int timerID) {
 		return;
 	}
 
+	playerScore.missPenalty();
 	rando = rngGen.randomNumberGenerator(6);
 
+	currentTimer++;
 	glutTimerFunc(millisec, buttonTimer, currentTimer);
 }
 
@@ -49,13 +51,10 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
 			playerScore.hitCounter();
-			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button1.buttonLightUp(false);
-		}
-		else {
-			playerScore.missPenalty();
-			//resetButtonTimer();
+
+			resetButtonTimer();
 		}
 		break;
 	case 1:
@@ -63,13 +62,10 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
 			playerScore.hitCounter();
-			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button2.buttonLightUp(false);
-		}
-		else {
-			playerScore.missPenalty();
-			//resetButtonTimer();
+
+			resetButtonTimer();
 		}
 		break;
 	case 2:
@@ -77,13 +73,10 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
 			playerScore.hitCounter();
-			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button3.buttonLightUp(false);
-		}
-		else {
-			playerScore.missPenalty();
-			//resetButtonTimer();
+
+			resetButtonTimer();
 		}
 		break;
 	case 3:
@@ -91,13 +84,10 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
 			playerScore.hitCounter();
-			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button4.buttonLightUp(false);
-		}
-		else {
-			playerScore.missPenalty();
-			//resetButtonTimer();
+
+			resetButtonTimer();
 		}
 		break;
 	case 4:
@@ -105,13 +95,10 @@ void hitDetection() {
 			//cout << "Hit!" << endl;
 			playerScore.scoreAdd();
 			playerScore.hitCounter();
-			//resetButtonTimer();
 			rando = rngGen.randomNumberGenerator(6);
 			button5.buttonLightUp(false);
-		}
-		else {
-			playerScore.missPenalty();
-			//resetButtonTimer();
+
+			resetButtonTimer();
 		}
 		break;
 	}

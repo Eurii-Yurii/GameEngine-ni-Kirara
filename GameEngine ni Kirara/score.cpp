@@ -35,18 +35,12 @@ void Score::scoreAdd(){
 }
 
 void Score::missPenalty(){
-	misses += 1;
 
-	if (misses == 62) {
-		misses = 0;
-		actualMisses += 1;
-		streak = 1;
-		cout << "Misses: " << actualMisses << endl;
-	}
+	misses++;
+    streak = 0;
 
-	if (actualMisses >= 3) {
+	if (misses >= 5) {
 		cout << "Game Over!" << endl;
-		cout << "LOSING ASS NIGGER" << endl;
 		glutLeaveGameMode;
 		exit(0);
 	}

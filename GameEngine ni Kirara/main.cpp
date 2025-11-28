@@ -17,6 +17,9 @@ Camera mCamera;
 thisBox box;
 float grav;
 
+extern int currentTimer;
+extern void resetButtonTimer();
+
 void Initialize() {
 
 }
@@ -34,7 +37,9 @@ void start() {
 	extern int millisec;
 	extern void buttonTimer(int value);
 
-	glutTimerFunc(millisec, buttonTimer, 0);
+	glutTimerFunc(millisec, buttonTimer, currentTimer);
+
+	resetButtonTimer();
 	
 }
 
