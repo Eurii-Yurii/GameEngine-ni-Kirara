@@ -85,6 +85,12 @@
     <Filter Include="Source Files\WhackAMole ni Kirara\Scores">
       <UniqueIdentifier>{9f9464b6-19f5-40cf-9293-1ee48afafa1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Functions\Collision">
+      <UniqueIdentifier>{67196866-9b10-4f95-a744-3b3b4dcfb87f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Functions\Collision">
+      <UniqueIdentifier>{f19cf679-709e-497e-985b-4f68f1819c78}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -123,6 +129,9 @@
     <ClCompile Include="mButton.cpp">
       <Filter>Source Files\WhackAMole ni Kirara\Button</Filter>
     </ClCompile>
+    <ClCompile Include="collider.cpp">
+      <Filter>Source Files\Functions\Collision</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawBox.h">
@@ -157,6 +166,9 @@
     </ClInclude>
     <ClInclude Include="mButton.h">
       <Filter>Header Files\WhackAMole ni Kirara\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="collider.h">
+      <Filter>Header Files\Functions\Collision</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
