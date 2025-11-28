@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "drawBox.h"
+#include "drawSphere.h"
 
 thisBox::thisBox() {
 	posX = 0;
@@ -51,5 +52,4 @@ void thisBox::Box(float posX, float posY, float posZ, float length, float width,
     glVertex3f(posX, posY, posZ + height);
     glEnd();
     glPopMatrix();
-
 }

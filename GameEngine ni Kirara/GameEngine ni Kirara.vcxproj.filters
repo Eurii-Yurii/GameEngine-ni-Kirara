@@ -158,5 +158,8 @@
     <ClInclude Include="mButton.h">
       <Filter>Header Files\WhackAMole ni Kirara\Button</Filter>
     </ClInclude>
+    <ClInclude Include="drawSphere.h">
+      <Filter>Header Files\Functions\Draw</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

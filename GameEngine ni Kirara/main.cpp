@@ -4,6 +4,7 @@
 #include "engine.h"
 
 #include "drawBox.h"
+#include "drawSphere.h"
 #include "button.h"
 #include "inputs.h"
 #include "Camera.h"
@@ -15,8 +16,6 @@ using namespace std;
 
 Camera mCamera;
 thisBox box;
-float grav;
-
 extern int currentTimer;
 extern void resetButtonTimer();
 
@@ -46,8 +45,14 @@ void start() {
 void Update() 
 {
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
-
 	mButton();
+}
+
+void fixedUpdate() 
+{
+	int a = 0;
+
+	cout << a << endl;
 }
 
 int main(int argc, char** argv)

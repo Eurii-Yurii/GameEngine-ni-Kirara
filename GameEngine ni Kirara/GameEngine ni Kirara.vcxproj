@@ -140,6 +140,7 @@
     <ClInclude Include="button.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="drawBox.h" />
+    <ClInclude Include="drawSphere.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="graphics.h" />

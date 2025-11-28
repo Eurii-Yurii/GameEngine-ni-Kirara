@@ -1,6 +1,7 @@
 #include "graphics.h"
 #include "engine.h"
 
+
 void ChangeWindowSize(int width, int height)
 {
 	//height or width should NOT be 0
