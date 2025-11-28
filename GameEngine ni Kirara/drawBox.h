@@ -11,11 +11,11 @@ private:
 		length,
 		width,
 		height;
-public:
+	public:
 
-	thisBox();
+		thisBox();
 
-	void Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B);
+		void Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B);
 
 };
 

@@ -14,7 +14,6 @@ thisBox::thisBox() {
 	height = 5;
 }
 
-
 void thisBox::Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B)
 {
     glPushMatrix();
@@ -51,5 +50,22 @@ void thisBox::Box(float posX, float posY, float posZ, float length, float width,
     glVertex3f(posX + width, posY, posZ + height);
     glVertex3f(posX, posY, posZ + height);
     glEnd();
+    glPopMatrix();
+}
+
+thisSphere::thisSphere() {
+    slices = 0;
+    stacks = 0;
+    radius = 0;
+}
+
+void thisSphere::Sphere(float slices, float stacks, float radius) {
+    glPushMatrix();
+    GLUquadric* quad;
+    quad = gluNewQuadric();
+    gluQuadricDrawStyle(quad, GLU_FILL);
+    gluQuadricNormals(quad, GLU_SMOOTH);
+    gluSphere(quad, radius, slices, stacks);
+    gluDeleteQuadric(quad);
     glPopMatrix();
 }

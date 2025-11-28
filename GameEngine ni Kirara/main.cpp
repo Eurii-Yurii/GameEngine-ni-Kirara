@@ -16,6 +16,7 @@ using namespace std;
 
 Camera mCamera;
 thisBox box;
+thisSphere sphere;
 extern int currentTimer;
 extern void resetButtonTimer();
 
@@ -44,8 +45,10 @@ void start() {
 
 void Update() 
 {
-	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
-	mButton();
+	/*box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
+	mButton();*/
+
+	sphere.Sphere(20, 20, 5);
 }
 
 void fixedUpdate() 
