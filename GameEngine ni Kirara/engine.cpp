@@ -25,6 +25,7 @@ void PrepareEngine(int argc, char** argv)
 	/*gluLookAt(0.0f, 0.0f, 20.0f,
 		0.0f, 0.0f, 0.0f,
 		0.0f, 1.0f, 0.0f);*/
+	glutIgnoreKeyRepeat(1);
 
 	light.lightSet();
 	light.lightColor(1.0f, 1.0f, 1.0f, 1.0f);

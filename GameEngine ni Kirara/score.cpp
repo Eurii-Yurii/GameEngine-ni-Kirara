@@ -41,7 +41,7 @@ void Score::missPenalty(){
 
 	if (misses >= 5) {
 		cout << "Game Over!" << endl;
-		glutLeaveGameMode;
+		//glutLeaveGameMode;
 		exit(0);
 	}
 }

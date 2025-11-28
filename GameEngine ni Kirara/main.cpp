@@ -12,12 +12,15 @@
 #include "RNG.h"
 #include "gravity.h"
 #include "mButton.h"
+#include "firstPersonMovement.h"
 
 using namespace std;
 
 Camera mCamera;
 thisBox box;
 thisSphere sphere;
+
+extern fpsMovement fpsMove;
 extern int currentTimer;
 extern void resetButtonTimer();
 
@@ -27,29 +30,28 @@ void Initialize() {
 
 void start() {
 	inputs::control();
+
 	mCamera.cameraControl(
 		0, 0. - 20, 15,
 		0, 0, 0,
 		0, 10, 0
 	);
 
-	/*glutTimerFunc(0, randomNumGen::timerer, 0);
+	glutTimerFunc(0, randomNumGen::timerer, 0);
 
 	extern int millisec;
 	extern void buttonTimer(int value);
 
 	glutTimerFunc(millisec, buttonTimer, currentTimer);
 
-	resetButtonTimer();*/
+	resetButtonTimer();
 	
 }
 
 void Update() 
 {
-	/*box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
-	mButton();*/
-
-	sphere.Sphere(20, 20, 5);
+	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
+	mButton();
 }
 
 int main(int argc, char** argv)

@@ -127,6 +127,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="draw.cpp" />
     <ClCompile Include="engine.cpp" />
+    <ClCompile Include="firstPersonMovement.cpp" />
     <ClCompile Include="gameObject.cpp" />
     <ClCompile Include="graphics.cpp" />
     <ClCompile Include="gravity.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Inputs.h" />
     <ClInclude Include="lighting.h" />
     <ClInclude Include="mButton.h" />
+    <ClInclude Include="firstPersonMovement.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="score.h" />
   </ItemGroup>

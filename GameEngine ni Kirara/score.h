@@ -2,7 +2,7 @@
 #define SC0RE_H
 class Score {
 private:
-	int score = 300;
+	int score;
 	int hits;
 	int misses;
 	int streak;
