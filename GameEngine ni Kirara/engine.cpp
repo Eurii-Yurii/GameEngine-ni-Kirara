@@ -1,8 +1,11 @@
 #include "engine.h"
 #include "graphics.h"
 #include "Camera.h"
+#include "lighting.h"
 
 extern Camera mCamera;
+
+thisLight light;
 
 void PrepareEngine(int argc, char** argv)
 {
@@ -22,6 +25,10 @@ void PrepareEngine(int argc, char** argv)
 	/*gluLookAt(0.0f, 0.0f, 20.0f,
 		0.0f, 0.0f, 0.0f,
 		0.0f, 1.0f, 0.0f);*/
+
+	light.lightSet();
+	light.lightColor(1.0f, 1.0f, 1.0f, 1.0f);
+	light.lightPosition(0.0f, 0.0f, 20.0f);
 
 	glEnable(GL_DEPTH_TEST);
 

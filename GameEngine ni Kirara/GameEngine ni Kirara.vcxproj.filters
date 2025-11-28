@@ -85,6 +85,12 @@
     <Filter Include="Source Files\WhackAMole ni Kirara\Scores">
       <UniqueIdentifier>{9f9464b6-19f5-40cf-9293-1ee48afafa1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Functions\Lighting">
+      <UniqueIdentifier>{4a2042df-eab6-4c94-ae31-7e225f3c39e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Functions\Lighting">
+      <UniqueIdentifier>{a8a3de19-06b3-4487-8b3e-8d56d0181bdd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -123,6 +129,9 @@
     <ClCompile Include="mButton.cpp">
       <Filter>Source Files\WhackAMole ni Kirara\Button</Filter>
     </ClCompile>
+    <ClCompile Include="lighting.cpp">
+      <Filter>Source Files\Functions\Lighting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawBox.h">
@@ -160,6 +169,9 @@
     </ClInclude>
     <ClInclude Include="drawSphere.h">
       <Filter>Header Files\Functions\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="lighting.h">
+      <Filter>Header Files\Functions\Lighting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
