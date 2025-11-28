@@ -29,13 +29,12 @@ void Initialize() {
 }
 
 void start() {
-	inputs::control();
-
 	mCamera.cameraControl(
 		0, 0. - 20, 15,
 		0, 0, 0,
 		0, 10, 0
 	);
+
 
 	glutTimerFunc(0, randomNumGen::timerer, 0);
 
@@ -50,8 +49,15 @@ void start() {
 
 void Update() 
 {
+	inputs::control();
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
 	mButton();
+
+	
+	/*sphere.Sphere(20, 20, 5);
+	fpsMove.firstPersonControl();*/
+
+	
 }
 
 int main(int argc, char** argv)

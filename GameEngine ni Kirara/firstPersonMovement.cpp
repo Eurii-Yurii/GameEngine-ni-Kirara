@@ -22,20 +22,28 @@ upZ = 0.0f;
 
 void fpsMovement::firstPersonControl(){
 	if (inputs::isKeyDown('w')) {
+		cout << "W key is being pressed." << endl;
 		eyeY += moveSpeed;
 		centerY += moveSpeed;
+		fpsMovement::fpsCamera();
 	}
 	if (inputs::isKeyDown('s')) {
+		cout << "S key is being pressed." << endl;
 		eyeY -= moveSpeed;
 		centerY -= moveSpeed;
+		fpsMovement::fpsCamera();
 	}
 	if (inputs::isKeyDown('a')) {
+		cout << "A key is being pressed." << endl;
 		eyeX -= moveSpeed;
 		centerX -= moveSpeed;
+		fpsMovement::fpsCamera();
 	}
 	if (inputs::isKeyDown('d')) {
+		cout << "D key is being pressed." << endl;
 		eyeX += moveSpeed;
 		centerX += moveSpeed;
+		fpsMovement::fpsCamera();
 	}
 }
 
