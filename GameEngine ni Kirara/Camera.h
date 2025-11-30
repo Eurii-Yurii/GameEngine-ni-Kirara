@@ -7,11 +7,9 @@ private:
 		eyeX,
 		eyeY,
 		eyeZ,
-
 		centerX,
 		centerY,
 		centerZ,
-
 		upX,
 		upY,
 		upZ;

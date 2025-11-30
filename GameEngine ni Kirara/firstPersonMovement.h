@@ -5,9 +5,9 @@
 
 class fpsMovement {
 public:
-	float moveSpeed = 0.0f;
+	//float moveSpeed = 0.0f;
 
-	void firstPersonControl();
+	void firstPersonControl(float moveSpeed);
 	void fpsCamera();
 };
 
