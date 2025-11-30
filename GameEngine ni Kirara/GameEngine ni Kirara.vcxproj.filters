@@ -91,6 +91,12 @@
     <Filter Include="Header Files\Functions\Lighting">
       <UniqueIdentifier>{a8a3de19-06b3-4487-8b3e-8d56d0181bdd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Functions\Movement">
+      <UniqueIdentifier>{b8f822b1-758c-4804-96be-44f4cbd9e129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Functions\Movement">
+      <UniqueIdentifier>{9398d023-81c2-4ad8-b237-8de181e52333}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -132,6 +138,9 @@
     <ClCompile Include="lighting.cpp">
       <Filter>Source Files\Functions\Lighting</Filter>
     </ClCompile>
+    <ClCompile Include="firstPersonMovement.cpp">
+      <Filter>Source Files\Functions\Movement</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="drawBox.h">
@@ -172,6 +181,12 @@
     </ClInclude>
     <ClInclude Include="lighting.h">
       <Filter>Header Files\Functions\Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="drawPyramid.h">
+      <Filter>Header Files\Functions\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="firstPersonMovement.h">
+      <Filter>Header Files\Functions\Movement</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -40,6 +40,8 @@ void fpsMovement::firstPersonControl(float moveSpeed)
 	float rightX = -dirZ;
 	float rightZ = dirX;
 
+
+
 	fpsMovement::fpsCamera();
 
 	mCamera.cameraControl(
