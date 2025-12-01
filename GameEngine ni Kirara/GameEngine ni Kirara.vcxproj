@@ -143,6 +143,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="drawBox.h" />
     <ClInclude Include="drawCylinder.h" />
+    <ClInclude Include="drawDisk.h" />
     <ClInclude Include="drawPyramid.h" />
     <ClInclude Include="drawSphere.h" />
     <ClInclude Include="engine.h" />

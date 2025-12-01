@@ -7,6 +7,7 @@
 #include "drawSphere.h"
 #include "drawPyramid.h"
 #include "drawCylinder.h"
+#include "drawDisk.h"
 #include "lighting.h"
 #include "button.h"
 #include "inputs.h"
@@ -23,6 +24,7 @@ thisBox box;
 thisSphere sphere;
 thisPyramid pyramid;
 thisCylinder cylinder;
+thisDisk disk;
 
 extern fpsMovement fpsMove;
 extern int currentTimer;
@@ -62,8 +64,8 @@ void Update()
 	/*sphere.Sphere(20, 20, 5);
 
 	fpsMove.firstPersonControl(0.1f);*/
-	cylinder.Cylinder(2, 2, 5, 20, 20);
 	
+	disk.Disk(2, 5, 20, 20);
 }
 
 int main(int argc, char** argv)
