@@ -7,6 +7,7 @@
 #include "drawSphere.h"
 #include "drawPyramid.h"
 #include "drawCylinder.h"
+#include "drawCapsule.h"
 #include "drawDisk.h"
 #include "lighting.h"
 #include "button.h"
@@ -25,6 +26,7 @@ thisSphere sphere;
 thisPyramid pyramid;
 thisCylinder cylinder;
 thisDisk disk;
+thisCapsule capsule;
 
 extern fpsMovement fpsMove;
 extern int currentTimer;
@@ -35,21 +37,18 @@ void Initialize() {
 }
 
 void start() {
-	/*mCamera.cameraControl(
+	mCamera.cameraControl(
 		0, 0. - 20, 15,
 		0, 0, 0,
 		0, 10, 0
-	);*/
-	/*glutTimerFunc(0, randomNumGen::timerer, 0);
+	);
 
 	extern int millisec;
 	extern void buttonTimer(int value);
 
-	glutTimerFunc(millisec, buttonTimer, currentTimer);
-
-	resetButtonTimer();*/
+	resetButtonTimer();
 	mCamera.cameraControl(
-		0, 20, 10,
+		0, 0. -20, 15,
 		0, 0, 0,
 		0, 1, 0
 	);
@@ -57,15 +56,12 @@ void start() {
 
 void Update() 
 {
-	/*inputs::control();
+	inputs::control();
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
-	mButton();*/
+	mButton();
 
-	/*sphere.Sphere(20, 20, 5);
+	/*fpsMove.firstPersonControl(0.1f);*/
 
-	fpsMove.firstPersonControl(0.1f);*/
-	
-	disk.Disk(2, 5, 20, 20);
 }
 
 int main(int argc, char** argv)

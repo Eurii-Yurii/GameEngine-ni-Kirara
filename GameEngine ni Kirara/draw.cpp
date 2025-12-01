@@ -7,6 +7,7 @@
 #include "drawPyramid.h"
 #include "drawCylinder.h"
 #include "drawDisk.h"
+#include "drawCapsule.h"
 
 thisBox::thisBox() {
 	posX = 0;
@@ -144,6 +145,36 @@ void thisDisk::Disk(float innerRadius, float outerRadius, float slices, float st
     gluQuadricDrawStyle(quad, GLU_FILL);
     gluQuadricNormals(quad, GLU_SMOOTH);
     gluDisk(quad, innerRadius, outerRadius, slices, stacks);
+    gluDeleteQuadric(quad);
+    glPopMatrix();
+}
+
+thisCapsule::thisCapsule() {
+    radius = 0;
+    height = 0;
+    slices = 0;
+    stacks = 0;
+}
+
+void thisCapsule::Capsule(float radius, float height, float slices, float stacks) {
+    glPushMatrix();
+    GLUquadric* quad;
+    quad = gluNewQuadric();
+    gluQuadricDrawStyle(quad, GLU_FILL);
+    gluQuadricNormals(quad, GLU_SMOOTH);
+    // Draw cylinder body
+    gluCylinder(quad, radius, radius, height, slices, stacks);
+    // Draw top hemisphere
+    glPushMatrix();
+    glTranslatef(0.0f, 0.0f, height);
+    gluSphere(quad, radius, slices, stacks);
+    glPopMatrix();
+    // Draw bottom hemisphere
+    glPushMatrix();
+    glTranslatef(0.0f, 0.0f, 0.0f);
+    glRotatef(180.0f, 1.0f, 0.0f, 0.0f);
+    gluSphere(quad, radius, slices, stacks);
+    glPopMatrix();
     gluDeleteQuadric(quad);
     glPopMatrix();
 }

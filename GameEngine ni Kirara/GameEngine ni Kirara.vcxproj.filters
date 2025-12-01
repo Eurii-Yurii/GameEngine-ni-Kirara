@@ -194,5 +194,8 @@
     <ClInclude Include="drawDisk.h">
       <Filter>Header Files\Functions\Draw</Filter>
     </ClInclude>
+    <ClInclude Include="drawCapsule.h">
+      <Filter>Header Files\Functions\Draw</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
