@@ -17,6 +17,8 @@
 #include "gravity.h"
 #include "mButton.h"
 #include "firstPersonMovement.h"
+#include "sound.h"
+
 
 using namespace std;
 
@@ -42,20 +44,24 @@ void start() {
 		0, 0, 0,
 		0, 10, 0
 	);
+	playSound("licht.wav");
 
 	extern int millisec;
 	extern void buttonTimer(int value);
 
 	resetButtonTimer();
-	mCamera.cameraControl(
+	
+	/*mCamera.cameraControl(
 		0, 0. -20, 15,
 		0, 0, 0,
 		0, 1, 0
-	);
+	);*/
 }
 
 void Update() 
 {
+	
+
 	inputs::control();
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
 	mButton();

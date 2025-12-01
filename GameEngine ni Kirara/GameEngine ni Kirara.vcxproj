@@ -137,6 +137,7 @@
     <ClCompile Include="mButton.cpp" />
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="score.cpp" />
+    <ClCompile Include="sound.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="button.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="firstPersonMovement.h" />
     <ClInclude Include="RNG.h" />
     <ClInclude Include="score.h" />
+    <ClInclude Include="sound.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

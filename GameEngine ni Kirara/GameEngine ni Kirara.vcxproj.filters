@@ -97,6 +97,12 @@
     <Filter Include="Header Files\Functions\Movement">
       <UniqueIdentifier>{9398d023-81c2-4ad8-b237-8de181e52333}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Functions\Sounds">
+      <UniqueIdentifier>{c8613b5d-86b4-4485-beab-488c8d49b402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Functions\Sounds">
+      <UniqueIdentifier>{cd71f227-e6d1-4b07-a259-f32ffd9887d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="draw.cpp">
@@ -140,6 +146,9 @@
     </ClCompile>
     <ClCompile Include="firstPersonMovement.cpp">
       <Filter>Source Files\Functions\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="sound.cpp">
+      <Filter>Source Files\Functions\Sounds</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +205,9 @@
     </ClInclude>
     <ClInclude Include="drawCapsule.h">
       <Filter>Header Files\Functions\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>Header Files\Functions\Sounds</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
