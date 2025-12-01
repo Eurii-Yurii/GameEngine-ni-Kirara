@@ -188,5 +188,8 @@
     <ClInclude Include="firstPersonMovement.h">
       <Filter>Header Files\Functions\Movement</Filter>
     </ClInclude>
+    <ClInclude Include="drawCylinder.h">
+      <Filter>Header Files\Functions\Draw</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

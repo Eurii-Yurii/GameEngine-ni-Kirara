@@ -5,6 +5,7 @@
 #include "drawBox.h"
 #include "drawSphere.h"
 #include "drawPyramid.h"
+#include "drawCylinder.h"
 
 thisBox::thisBox() {
 	posX = 0;
@@ -107,4 +108,23 @@ void thisPyramid::Pyramid(float posX, float posY, float posZ, float height, int 
     glVertex3f(posX - height / 2, posY, posZ - height / 2);
     glEnd();
     glPopMatrix();                                                                                                                                    
+}
+
+thisCylinder::thisCylinder() {
+    baseRadius = 0;
+    topRadius = 0;
+    height = 0;
+    slices = 0;
+    stacks = 0;
+}
+
+void thisCylinder::Cylinder(float baseRadius, float topRadius, float height, float slices, float stacks) {
+    glPushMatrix();
+    GLUquadric* quad;
+    quad = gluNewQuadric();
+    gluQuadricDrawStyle(quad, GLU_FILL);
+    gluQuadricNormals(quad, GLU_SMOOTH);
+    gluCylinder(quad, baseRadius, topRadius, height, slices, stacks);
+    gluDeleteQuadric(quad);
+    glPopMatrix();
 }

@@ -6,6 +6,7 @@
 #include "drawBox.h"
 #include "drawSphere.h"
 #include "drawPyramid.h"
+#include "drawCylinder.h"
 #include "lighting.h"
 #include "button.h"
 #include "inputs.h"
@@ -21,6 +22,7 @@ Camera mCamera;
 thisBox box;
 thisSphere sphere;
 thisPyramid pyramid;
+thisCylinder cylinder;
 
 extern fpsMovement fpsMove;
 extern int currentTimer;
@@ -45,7 +47,7 @@ void start() {
 
 	resetButtonTimer();*/
 	mCamera.cameraControl(
-		0, 0, 15,
+		0, 20, 10,
 		0, 0, 0,
 		0, 1, 0
 	);
@@ -60,7 +62,8 @@ void Update()
 	/*sphere.Sphere(20, 20, 5);
 
 	fpsMove.firstPersonControl(0.1f);*/
-	pyramid.Pyramid(2, 2, 0, 2, 0, 102, 204);
+	cylinder.Cylinder(2, 2, 5, 20, 20);
+	
 }
 
 int main(int argc, char** argv)
