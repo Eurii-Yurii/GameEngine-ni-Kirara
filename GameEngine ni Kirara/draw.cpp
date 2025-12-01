@@ -82,29 +82,29 @@ void thisPyramid::Pyramid(float posX, float posY, float posZ, float height, int 
     glPushMatrix();
     glColor3ub(R, G, B);
     glBegin(GL_TRIANGLES);
-    // Front
+
     glVertex3f(posX, posY + height, posZ);
     glVertex3f(posX - height / 2, posY, posZ + height / 2);
     glVertex3f(posX + height / 2, posY, posZ + height / 2);
-    // Right
+    
     glVertex3f(posX, posY + height, posZ);
     glVertex3f(posX + height / 2, posY, posZ + height / 2);
     glVertex3f(posX + height / 2, posY, posZ - height / 2);
-    // Back
+    
     glVertex3f(posX, posY + height, posZ);
     glVertex3f(posX + height / 2, posY, posZ - height / 2);
     glVertex3f(posX - height / 2, posY, posZ - height / 2);
-    // Left
+    
     glVertex3f(posX, posY + height, posZ);
     glVertex3f(posX - height / 2, posY, posZ - height / 2);
     glVertex3f(posX - height / 2, posY, posZ + height / 2);
     glEnd();
-    // Base
+    
     glBegin(GL_QUADS);
     glVertex3f(posX - height / 2, posY, posZ + height / 2);
     glVertex3f(posX + height / 2, posY, posZ + height / 2);
     glVertex3f(posX + height / 2, posY, posZ - height / 2);
     glVertex3f(posX - height / 2, posY, posZ - height / 2);
     glEnd();
-    glPopMatrix();
+    glPopMatrix();                                                                                                                                    
 }
