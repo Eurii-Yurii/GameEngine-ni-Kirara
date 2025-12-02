@@ -23,12 +23,9 @@
 using namespace std;
 
 Camera mCamera;
-thisBox box;
-thisSphere sphere;
-thisPyramid pyramid;
-thisCylinder cylinder;
-thisDisk disk;
-thisCapsule capsule;
+thisBox box, player, sphere, pyramid, cylinder, disk, capsule;
+
+float grav;
 
 extern fpsMovement fpsMove;
 extern int currentTimer;
@@ -61,9 +58,11 @@ void start() {
 void Update() 
 {
 	
-
+	grav = Gravity::applyGrav();
 	inputs::control();
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
+	player.Box(-15, grav, 2, 20, 30, -20, 20, 40, 60);
+	player.collide(box);
 	mButton();
 
 	/*fpsMove.firstPersonControl(0.1f);*/

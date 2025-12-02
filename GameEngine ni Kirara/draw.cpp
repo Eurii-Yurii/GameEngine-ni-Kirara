@@ -9,17 +9,50 @@
 #include "drawDisk.h"
 #include "drawCapsule.h"
 
+using namespace std;
+
 thisBox::thisBox() {
-	posX = 0;
-	posY = 0;
-	posZ = 0;
-	length = 5;
-	width = 5;
-	height = 5;
+
+        //drawBox
+        posX = 0;
+        posY = 0;
+        posZ = 0;
+        length = 0;
+        width = 0;
+        //Capsule
+        height = 0;
+        radius = 0;
+        height = 0;
+        //Capsule/Cylinder
+        slices = 0;
+        stacks = 0;
+        //Cylinder
+        baseRadius = 0;
+        topRadius = 0;
+        height = 0;
+        //Disk
+        innerRadius = 0;
+        outerRadius = 0;
+        //Pyramid
+        PyramidPosX = 0;
+        PyramidPosY = 0;
+        PyramidPosZ = 0;
+        PyramidHeight = 0;
+        //Sphere
+        SphereSlices = 0;
+        SphereStacks = 0;
+        SphereRadius = 0;
 }
 
 void thisBox::Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B)
 {
+    this->posX = posX;
+    this->posY = posY;
+    this->posZ = posZ;
+    this->length = length;
+    this->width = width;
+    this->height = height;
+
     glPushMatrix();
     glColor3ub(R, G, B);
     glBegin(GL_QUADS);
@@ -57,13 +90,9 @@ void thisBox::Box(float posX, float posY, float posZ, float length, float width,
     glPopMatrix();
 }
 
-thisSphere::thisSphere() {
-    slices = 0;
-    stacks = 0;
-    radius = 0;
-}
 
-void thisSphere::Sphere(float slices, float stacks, float radius) {
+
+void thisBox::Sphere(float slices, float stacks, float radius) {
     glPushMatrix();
     GLUquadric* quad;
     quad = gluNewQuadric();
@@ -74,14 +103,11 @@ void thisSphere::Sphere(float slices, float stacks, float radius) {
     glPopMatrix();
 }
 
-thisPyramid::thisPyramid() {
-    posX = 0;
-    posY = 0;
-    posZ = 0;
-    height = 5;
-}
 
-void thisPyramid::Pyramid(float posX, float posY, float posZ, float height, int R, int G, int B) {
+
+void thisBox::Pyramid(float posX, float posY, float posZ, float height, int R, int G, int B) {
+
+
     glPushMatrix();
     glColor3ub(R, G, B);
     glBegin(GL_TRIANGLES);
@@ -112,15 +138,9 @@ void thisPyramid::Pyramid(float posX, float posY, float posZ, float height, int 
     glPopMatrix();                                                                                                                                    
 }
 
-thisCylinder::thisCylinder() {
-    baseRadius = 0;
-    topRadius = 0;
-    height = 0;
-    slices = 0;
-    stacks = 0;
-}
 
-void thisCylinder::Cylinder(float baseRadius, float topRadius, float height, float slices, float stacks) {
+
+void thisBox::Cylinder(float baseRadius, float topRadius, float height, float slices, float stacks) {
     glPushMatrix();
     GLUquadric* quad;
     quad = gluNewQuadric();
@@ -131,14 +151,9 @@ void thisCylinder::Cylinder(float baseRadius, float topRadius, float height, flo
     glPopMatrix();
 }
 
-thisDisk::thisDisk() {
-    innerRadius = 0;
-    outerRadius = 0;
-    slices = 0;
-    stacks = 0;
-}
 
-void thisDisk::Disk(float innerRadius, float outerRadius, float slices, float stacks) {
+
+void thisBox::Disk(float innerRadius, float outerRadius, float slices, float stacks) {
     glPushMatrix();
     GLUquadric* quad;
     quad = gluNewQuadric();
@@ -149,14 +164,10 @@ void thisDisk::Disk(float innerRadius, float outerRadius, float slices, float st
     glPopMatrix();
 }
 
-thisCapsule::thisCapsule() {
-    radius = 0;
-    height = 0;
-    slices = 0;
-    stacks = 0;
-}
 
-void thisCapsule::Capsule(float radius, float height, float slices, float stacks) {
+
+void thisBox::Capsule(float radius, float height, float slices, float stacks) 
+{
     glPushMatrix();
     GLUquadric* quad;
     quad = gluNewQuadric();
@@ -178,3 +189,47 @@ void thisCapsule::Capsule(float radius, float height, float slices, float stacks
     gluDeleteQuadric(quad);
     glPopMatrix();
 }
+
+bool thisBox::collide(thisBox& other)
+{
+    float xSize = this->length / 2;
+    float ySize = this->height / 2;
+    float zSize = this->width / 2;
+
+    // Size of the other collider
+    float xSizeOther = other.length / 2;
+    float ySizeOther = other.height / 2;
+    float zSizeOther = other.width / 2;
+
+
+ 
+
+    bool xCollision = this->posX - xSize >= other.posX + xSizeOther &&
+        this->posX + xSize <= other.posX - xSizeOther;
+ 
+    bool yCollision = this->posY - ySize >= other.posY + ySizeOther &&
+        this->posY + ySize <= other.posY - ySizeOther;
+
+    bool zCollision = this->posZ - zSize >= other.posZ + zSizeOther &&
+        this->posZ + zSize <= other.posZ - zSizeOther;
+
+    
+
+
+    if (zCollision || yCollision || xCollision)
+    {
+        cout << "COLLIDING!" << endl;
+        cout << this->posX << this->posY << this->posZ << endl;
+        cout << other.posX << other.posY << other.posZ << endl;
+        return false;
+    }
+
+    else
+    {
+        cout << "NOT colliding!!" << endl;
+        cout << this->posX << this->posY << this->posZ << endl;
+        cout << other.posX << other.posY << other.posZ << endl;
+        return true;
+    }
+}
+
