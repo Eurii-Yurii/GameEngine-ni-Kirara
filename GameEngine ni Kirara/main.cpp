@@ -3,12 +3,7 @@
 #include <iostream>
 #include "engine.h"
 
-#include "drawBox.h"
-#include "drawSphere.h"
-#include "drawPyramid.h"
-#include "drawCylinder.h"
-#include "drawCapsule.h"
-#include "drawDisk.h"
+#include "draw.h"
 #include "lighting.h"
 #include "button.h"
 #include "inputs.h"
@@ -23,7 +18,7 @@
 using namespace std;
 
 Camera mCamera;
-thisBox box, player, sphere, pyramid, cylinder, disk, capsule;
+shapes box, player, sphere, pyramid, cylinder, disk, capsule;
 
 float grav;
 
@@ -41,31 +36,28 @@ void start() {
 		0, 0, 0,
 		0, 10, 0
 	);
-	playSound("licht.wav");
+	
+	playSound("coolSong.wav");
 
 	extern int millisec;
 	extern void buttonTimer(int value);
 
 	resetButtonTimer();
 	
-	/*mCamera.cameraControl(
+	mCamera.cameraControl(
 		0, 0. -20, 15,
 		0, 0, 0,
 		0, 1, 0
-	);*/
+	);
 }
 
 void Update() 
 {
 	
-	grav = Gravity::applyGrav();
 	inputs::control();
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
-	player.Box(-15, grav, 2, 20, 30, -20, 20, 40, 60);
-	player.collide(box);
 	mButton();
 
-	/*fpsMove.firstPersonControl(0.1f);*/
 
 }
 

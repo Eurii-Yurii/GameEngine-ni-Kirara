@@ -152,7 +152,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="drawBox.h">
+    <ClInclude Include="draw.h">
       <Filter>Header Files\Functions\Draw</Filter>
     </ClInclude>
     <ClInclude Include="engine.h">
@@ -185,26 +185,11 @@
     <ClInclude Include="mButton.h">
       <Filter>Header Files\WhackAMole ni Kirara\Button</Filter>
     </ClInclude>
-    <ClInclude Include="drawSphere.h">
-      <Filter>Header Files\Functions\Draw</Filter>
-    </ClInclude>
     <ClInclude Include="lighting.h">
       <Filter>Header Files\Functions\Lighting</Filter>
     </ClInclude>
-    <ClInclude Include="drawPyramid.h">
-      <Filter>Header Files\Functions\Draw</Filter>
-    </ClInclude>
     <ClInclude Include="firstPersonMovement.h">
       <Filter>Header Files\Functions\Movement</Filter>
-    </ClInclude>
-    <ClInclude Include="drawCylinder.h">
-      <Filter>Header Files\Functions\Draw</Filter>
-    </ClInclude>
-    <ClInclude Include="drawDisk.h">
-      <Filter>Header Files\Functions\Draw</Filter>
-    </ClInclude>
-    <ClInclude Include="drawCapsule.h">
-      <Filter>Header Files\Functions\Draw</Filter>
     </ClInclude>
     <ClInclude Include="sound.h">
       <Filter>Header Files\Functions\Sounds</Filter>

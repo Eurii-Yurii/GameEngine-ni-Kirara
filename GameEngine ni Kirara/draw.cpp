@@ -2,16 +2,12 @@
 #include <cmath>
 #include <iostream>
 
-#include "drawBox.h"
-#include "drawSphere.h"
-#include "drawPyramid.h"
-#include "drawCylinder.h"
-#include "drawDisk.h"
-#include "drawCapsule.h"
+#include "draw.h"
+
 
 using namespace std;
 
-thisBox::thisBox() {
+shapes::shapes() {
 
         //drawBox
         posX = 0;
@@ -44,7 +40,7 @@ thisBox::thisBox() {
         SphereRadius = 0;
 }
 
-void thisBox::Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B)
+void shapes::Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B)
 {
     this->posX = posX;
     this->posY = posY;
@@ -92,8 +88,9 @@ void thisBox::Box(float posX, float posY, float posZ, float length, float width,
 
 
 
-void thisBox::Sphere(float slices, float stacks, float radius) {
+void shapes::Sphere(float slices, float stacks, float radius, float posX, float posY, float posZ) {
     glPushMatrix();
+    glTranslatef(posX, posY, posZ);
     GLUquadric* quad;
     quad = gluNewQuadric();
     gluQuadricDrawStyle(quad, GLU_FILL);
@@ -105,7 +102,7 @@ void thisBox::Sphere(float slices, float stacks, float radius) {
 
 
 
-void thisBox::Pyramid(float posX, float posY, float posZ, float height, int R, int G, int B) {
+void shapes::Pyramid(float posX, float posY, float posZ, float height, int R, int G, int B) {
 
 
     glPushMatrix();
@@ -140,7 +137,7 @@ void thisBox::Pyramid(float posX, float posY, float posZ, float height, int R, i
 
 
 
-void thisBox::Cylinder(float baseRadius, float topRadius, float height, float slices, float stacks) {
+void shapes::Cylinder(float baseRadius, float topRadius, float height, float slices, float stacks) {
     glPushMatrix();
     GLUquadric* quad;
     quad = gluNewQuadric();
@@ -153,8 +150,9 @@ void thisBox::Cylinder(float baseRadius, float topRadius, float height, float sl
 
 
 
-void thisBox::Disk(float innerRadius, float outerRadius, float slices, float stacks) {
+void shapes::Disk(float innerRadius, float outerRadius, float slices, float stacks, float posX, float posY, float posZ) {
     glPushMatrix();
+    glTranslatef(posX, posY, posZ);
     GLUquadric* quad;
     quad = gluNewQuadric();
     gluQuadricDrawStyle(quad, GLU_FILL);
@@ -166,21 +164,22 @@ void thisBox::Disk(float innerRadius, float outerRadius, float slices, float sta
 
 
 
-void thisBox::Capsule(float radius, float height, float slices, float stacks) 
+void shapes::Capsule(float radius, float height, float slices, float stacks, float posX, float posY, float posZ)
 {
     glPushMatrix();
+    glTranslatef(posX, posY, posZ);
     GLUquadric* quad;
     quad = gluNewQuadric();
     gluQuadricDrawStyle(quad, GLU_FILL);
     gluQuadricNormals(quad, GLU_SMOOTH);
-    // Draw cylinder body
+
     gluCylinder(quad, radius, radius, height, slices, stacks);
-    // Draw top hemisphere
+
     glPushMatrix();
     glTranslatef(0.0f, 0.0f, height);
     gluSphere(quad, radius, slices, stacks);
     glPopMatrix();
-    // Draw bottom hemisphere
+
     glPushMatrix();
     glTranslatef(0.0f, 0.0f, 0.0f);
     glRotatef(180.0f, 1.0f, 0.0f, 0.0f);
@@ -190,7 +189,7 @@ void thisBox::Capsule(float radius, float height, float slices, float stacks)
     glPopMatrix();
 }
 
-bool thisBox::collide(thisBox& other)
+bool shapes::collide(shapes& other)
 {
     float xSize = this->length / 2;
     float ySize = this->height / 2;
