@@ -39,7 +39,6 @@ void start() {
 	
 	playSound("Cats Cosy Course.wav");
 
-	//extern int millisec;
 	extern void buttonTimer(int value);
 
 	resetButtonTimer();
@@ -53,7 +52,7 @@ void start() {
 
 void Update() 
 {
-	
+	cout << "Kirara so cool ";
 	inputs::control();
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
 	mButton();
