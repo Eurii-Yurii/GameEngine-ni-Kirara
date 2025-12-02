@@ -6,5 +6,5 @@ using namespace std;
 
 void playSound(const char* soundFilePath) {
 
-	PlaySoundA(soundFilePath, NULL, SND_FILENAME | SND_ASYNC);
+	PlaySoundA(soundFilePath, NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 }
