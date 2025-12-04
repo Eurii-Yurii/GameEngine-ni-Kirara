@@ -54,6 +54,7 @@ void Update()
 {
 	cout << "Kirara so cool ";
 	inputs::control();
+	fpsMove.firstPersonControl(1);
 	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
 	mButton();
 
