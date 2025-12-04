@@ -152,7 +152,7 @@ void shapes::Cylinder(float baseRadius, float topRadius, float height, float sli
 
 void shapes::Disk(float innerRadius, float outerRadius, float slices, float stacks, float posX, float posY, float posZ) {
     glPushMatrix();
-    glTranslatef(posX, posY, posZ);
+    glTranslatef(0posX, posY, posZ);
     GLUquadric* quad;
     quad = gluNewQuadric();
     gluQuadricDrawStyle(quad, GLU_FILL);
