@@ -138,7 +138,7 @@
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="score.cpp" />
     <ClCompile Include="sound.cpp" />
-    <ClCompile Include="TextRenderer.cpp" />
+    <ClCompile Include="textRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="button.h" />

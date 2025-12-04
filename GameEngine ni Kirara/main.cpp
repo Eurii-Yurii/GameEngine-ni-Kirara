@@ -38,7 +38,7 @@ void Initialize() {
 
 void start() {
 	mCamera.cameraControl(
-		0, 0. - 20, 15,
+		0, -50, 1,
 		0, 0, 0,
 		0, 10, 0
 	);
@@ -58,16 +58,16 @@ void start() {
 
 void Update() 
 {
-	fpsMove.firstPersonControl(1);
-	TextRend::draw;
+	TextRend::output(10, 10, GLUT_BITMAP_TIMES_ROMAN_24, "Kirara");
 	grav = Gravity::applyGrav();
 	inputs::control();
-	/*box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);*/
-	player.Box(-15, grav, 2, 20, 30, -20, 20, 40, 60);
-	player.collide(box);
-	mButton();
+	//box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
+	//mButton();
+	/*player.Box(-15, grav, 2, 20, 30, -20, 20, 40, 60);
+	player.collide(box);*/
+	
 
-	/*fpsMove.firstPersonControl(0.1f);*/
+	//fpsMove.firstPersonControl(1);
 
 }
 
