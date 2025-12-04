@@ -1,7 +1,7 @@
 #include <iostream>
 #include <glut.h>
 
-#include "drawBox.h"
+#include "drawShapes.h"
 
 class button {
 private:

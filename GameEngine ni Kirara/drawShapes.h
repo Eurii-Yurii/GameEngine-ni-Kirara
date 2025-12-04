@@ -2,7 +2,7 @@
 #define DRAWBOX_H
 
 
-class thisBox {
+class renderShape {
 private:
 	float
 		//drawBox
@@ -37,7 +37,7 @@ private:
 
 	public:
 
-		thisBox();
+		renderShape();
 
 		void Box(float posX, float posY, float posZ, float length, float width, float height, int R, int G, int B);
 		void Capsule(float radius, float height, float slices, float stacks);
@@ -45,10 +45,10 @@ private:
 		void Disk(float innerRadius, float outerRadius, float slices, float stacks);
 		void Pyramid(float posX, float posY, float posZ, float height, int R, int G, int B);
 		void Sphere(float slices, float stacks, float radius);
-		bool collide(thisBox& other);
+		bool collide(renderShape& other);
 
 };
 
-extern thisBox box;
+extern renderShape box;
 
 #endif

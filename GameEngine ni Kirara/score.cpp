@@ -1,7 +1,7 @@
 #include <iostream>
 #include <glut.h>
 
-#include "drawBox.h"
+#include "drawShapes.h"
 #include "button.h"
 #include "inputs.h"
 #include "Camera.h"
