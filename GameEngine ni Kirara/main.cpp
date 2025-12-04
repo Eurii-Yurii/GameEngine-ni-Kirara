@@ -42,7 +42,7 @@ void start() {
 		0, 0, 0,
 		0, 10, 0
 	);
-	playSound("licht.wav");
+	playSound("Cats Cosy Course.wav");
 
 	extern int millisec;
 	extern void buttonTimer(int value);
