@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#include "drawBox.h"
+#include "drawShapes.h"
 #include "button.h"
 #include "inputs.h"
 #include "Camera.h"
@@ -14,7 +14,7 @@ using namespace std;
 
 #include "mButton.h"
 
-extern thisBox box;
+extern renderShape box;
 Score playerScore;
 
 extern button button1, button2, button3, button4, button5;
