@@ -18,6 +18,7 @@
 #include "mButton.h"
 #include "firstPersonMovement.h"
 #include "sound.h"
+#include "textrenderer.h"
 
 
 using namespace std;
@@ -57,10 +58,11 @@ void start() {
 
 void Update() 
 {
-	
+	fpsMove.firstPersonControl(1);
+	TextRend::draw;
 	grav = Gravity::applyGrav();
 	inputs::control();
-	box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);
+	/*box.Box(-15, -10, -1, 20, 30, -20, 102, 0, 0);*/
 	player.Box(-15, grav, 2, 20, 30, -20, 20, 40, 60);
 	player.collide(box);
 	mButton();

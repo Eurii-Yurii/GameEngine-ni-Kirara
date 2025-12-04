@@ -20,13 +20,13 @@ int randomNumGen::randomNumberGenerator(int rngMax)
     return RNG;
 }
 
-void randomNumGen::getDih(int num) {
+void randomNumGen::getRng(int num) {
     //cout << RNG;
     randomNumberGenerator(6);
 }
 void randomNumGen::timerer(int time)
 {
-	randomNumGen::getDih(1);
+	randomNumGen::getRng(1);
 	glutTimerFunc(2000, timerer, 0);
 }
 

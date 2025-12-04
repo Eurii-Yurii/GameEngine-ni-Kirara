@@ -138,6 +138,7 @@
     <ClCompile Include="RNG.cpp" />
     <ClCompile Include="score.cpp" />
     <ClCompile Include="sound.cpp" />
+    <ClCompile Include="TextRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="button.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="RNG.h" />
     <ClInclude Include="score.h" />
     <ClInclude Include="sound.h" />
+    <ClInclude Include="textrenderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
