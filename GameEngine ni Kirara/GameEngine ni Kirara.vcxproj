@@ -143,7 +143,7 @@
   <ItemGroup>
     <ClInclude Include="button.h" />
     <ClInclude Include="Camera.h" />
-    <ClInclude Include="drawBox.h" />
+    <ClInclude Include="drawShapes.h" />
     <ClInclude Include="drawCapsule.h" />
     <ClInclude Include="drawCylinder.h" />
     <ClInclude Include="drawDisk.h" />

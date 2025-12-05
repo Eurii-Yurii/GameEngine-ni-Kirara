@@ -1,6 +1,6 @@
 #include "gameObject.h"
 #include "glut.h"
-#include "drawBox.h"
+#include "drawShapes.h"
 
 GameObject::GameObject()
 {

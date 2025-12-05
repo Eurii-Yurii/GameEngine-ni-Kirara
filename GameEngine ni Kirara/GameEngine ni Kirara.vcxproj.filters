@@ -161,7 +161,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="drawBox.h">
+    <ClInclude Include="drawShapes.h">
       <Filter>Header Files\Functions\Draw</Filter>
     </ClInclude>
     <ClInclude Include="engine.h">
