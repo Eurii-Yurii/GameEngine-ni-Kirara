@@ -55,7 +55,7 @@ void start() {
 		0, 1, 0
 	);*/
 }
-
+//Where everything happens
 void Update() 
 {
 	TextRend::output(10, 10, GLUT_BITMAP_TIMES_ROMAN_24, "Kirara");
